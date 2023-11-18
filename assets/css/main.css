@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .nav-background {
+    @apply from-transparent to-slate-700 backdrop-blur-lg;
+  }
+
+  .leading-standard {
+    @apply leading-normal !important;
+  }
+
+  .swiper-navigation {
+    @apply absolute top-[50%] transform translate-y-[-50%] cursor-pointer z-20 text-secondary;
+  }
+
+  .contact-input {
+    @apply bg-slate-800 border border-accent placeholder-slate-600 text-sm block w-full p-3 focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary;
+  }
+}
+
+.swiper-slide {
+  height: auto !important;
+  background-color: #1e293b;
+}
+
+.swiper-content {
+  height: 100% !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
