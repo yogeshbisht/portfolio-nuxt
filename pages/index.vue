@@ -3,6 +3,8 @@
     <Hero />
     <About />
     <Skills />
+    <ProfessionalProjects />
+    <PersonalProjects />
   </div>
 </template>
 
@@ -10,4 +12,6 @@
 import Hero from "~/components/marketing/Hero.vue";
 import About from "~/components/marketing/About.vue";
 import Skills from "~/components/marketing/Skills.vue";
+import ProfessionalProjects from "~/components/marketing/ProfessionalProjects.vue";
+import PersonalProjects from "~/components/marketing/PersonalProjects.vue";
 </script>
