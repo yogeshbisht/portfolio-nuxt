@@ -49,17 +49,3 @@ body {
     @apply bg-slate-800 border border-accent placeholder-slate-600 text-sm block w-full p-3 focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary;
   }
 }
-
-.swiper-slide {
-  height: auto !important;
-  background-color: #1e293b;
-}
-
-.swiper-content {
-  height: 100% !important;
-}
-
-.swiper-button-disabled {
-  opacity: 0.2;
-  cursor: not-allowed;
-}

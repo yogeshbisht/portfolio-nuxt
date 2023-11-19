@@ -5,6 +5,8 @@
     <Skills />
     <ProfessionalProjects />
     <PersonalProjects />
+    <Testimonials />
+    <Contact />
   </div>
 </template>
 
@@ -14,4 +16,6 @@ import About from "~/components/marketing/About.vue";
 import Skills from "~/components/marketing/Skills.vue";
 import ProfessionalProjects from "~/components/marketing/ProfessionalProjects.vue";
 import PersonalProjects from "~/components/marketing/PersonalProjects.vue";
+import Testimonials from "~/components/marketing/Testimonials.vue";
+import Contact from "~/components/marketing/Contact.vue";
 </script>
