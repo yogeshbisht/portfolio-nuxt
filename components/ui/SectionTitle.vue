@@ -1,8 +1,12 @@
 <template>
   <div class="flex items-center justify-center lg:justify-start gap-x-4">
-    <div v-if="sectionId" class="flex items-center justify-center">
-      <SectionIcon class="hidden lg:block w-8 h-8" />
-    </div>
+    <ClientOnly>
+      <font-awesome-icon
+        v-if="sectionIcon"
+        class="hidden lg:block text-4xl"
+        :icon="sectionIcon"
+      />
+    </ClientOnly>
     <h1
       class="text-2xl xs:text-3xl md:text-4xl 2xl:text-6xl font-semibold text-center lg:text-left leading-standard"
       :class="{
@@ -28,5 +32,5 @@ type SectionTitleProps = {
 
 const { sectionId, small, title, subtitle } = defineProps<SectionTitleProps>();
 
-const SectionIcon = navData.find((nav) => nav.id === sectionId)?.icon;
+const sectionIcon = navData.find((nav) => nav.id === sectionId)?.icon;
 </script>
