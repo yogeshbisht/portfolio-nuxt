@@ -49,26 +49,21 @@ export const socialLinks: SocialLink[] = [
   {
     name: "Github",
     icon: "github",
-    link: "",
+    link: "https://github.com/yogeshbisht",
   },
   {
     name: "Facebook",
     icon: "facebook",
-    link: "",
+    link: "https://www.facebook.com/yogesh.bisht.925",
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "",
-  },
-  {
-    name: "Twitter",
-    icon: "x-twitter",
-    link: "",
+    name: "Upwork",
+    icon: "upwork",
+    link: "https://www.upwork.com/freelancers/yogeshbishtdev",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "",
+    link: "https://linkedin.com/in/yogesh-bisht-5871191b8",
   },
 ];

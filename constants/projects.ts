@@ -233,4 +233,17 @@ export const personalProjects: ProjectsData[] = [
     imgUrl: "https://picsum.photos/540/960",
     webUrl: "https://imprezion.vercel.app/",
   },
+  {
+    id: "devtrovex",
+    title: "Stack Overflow Concept",
+    tech: { full: "Next.js" },
+    intro: [
+      "This is a Stack Overflow concept built with Next.js.",
+      "Includes authentication and is fully responsive",
+      "Dynamically renders the questions and answers created by the user.",
+      "Users can upvote and downvote the questions and answers.",
+    ],
+    imgUrl: "https://picsum.photos/540/960",
+    webUrl: "https://devtrovex.vercel.app/",
+  },
 ];

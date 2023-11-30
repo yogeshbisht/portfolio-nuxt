@@ -13,6 +13,8 @@
             v-for="social in socialLinks"
             :key="social.name"
             :to="social.link"
+            target="_blank"
+            rel="noopener"
             class="hover:text-secondary transition-all duration-300 cursor-pointer"
           >
             <font-awesome-icon

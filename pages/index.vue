@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto xl:px-32 xs:px-12 px-8">
+  <div class="container mx-auto xl:px-32 xs:px-12 px-8" ref="main">
     <Hero />
     <About />
     <Skills />
@@ -10,7 +10,9 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
+import { onMounted, onUnmounted } from "vue";
+import gsap from "gsap";
 import Hero from "~/components/marketing/Hero.vue";
 import About from "~/components/marketing/About.vue";
 import Skills from "~/components/marketing/Skills.vue";
@@ -18,4 +20,60 @@ import ProfessionalProjects from "~/components/marketing/ProfessionalProjects.vu
 import PersonalProjects from "~/components/marketing/PersonalProjects.vue";
 import Testimonials from "~/components/marketing/Testimonials.vue";
 import Contact from "~/components/marketing/Contact.vue";
+
+const main = ref();
+let ctx;
+
+const siteSections = [
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "skills",
+    title: "Skills",
+  },
+  {
+    id: "projects",
+    title: "Professional Projects",
+  },
+  {
+    id: "personal",
+    title: "Personal Projects",
+  },
+  {
+    id: "testimonials",
+    title: "Testimonials",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
+
+onMounted(() => {
+  ctx = gsap.context(() => {
+    siteSections.forEach((section) => {
+      gsap.fromTo(
+        `#${section.id}`,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: `#${section.id}`,
+          },
+        }
+      );
+    });
+  });
+});
+
+onUnmounted(() => {
+  ctx.revert();
+});
 </script>

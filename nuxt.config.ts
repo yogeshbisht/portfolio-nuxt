@@ -12,4 +12,7 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxt/image", "nuxt-swiper"],
+  build: {
+    transpile: ["gsap"],
+  },
 });
