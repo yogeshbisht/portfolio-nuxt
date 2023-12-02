@@ -25,12 +25,12 @@
         class="relative order-1 lg:order-2 lg:-mt-8 xl:w-[360px] xl:h-[640px] lg:w-[315px] lg:h-[560px] w-[270px] h-[480px]"
       >
         <div
-          class="absolute hidden lg:block h-full w-full -right-6 -bottom-6 sm:border-4 border-accent border-2 z-10"
+          class="absolute hidden lg:block h-full w-full -right-6 -bottom-6 sm:border-4 border-accent border-2 z-10 rounded-xl"
         />
         <NuxtImg
           src="/images/yogesh_about.png"
           alt="profile image"
-          class="xl:w-[360px] xl:h-[640px] lg:w-[315px] lg:h-[560px] w-[270px] h-[480px] z-10 relative"
+          class="xl:w-[360px] xl:h-[640px] lg:w-[315px] lg:h-[560px] w-[270px] h-[480px] z-10 relative rounded-xl"
         />
       </div>
     </div>

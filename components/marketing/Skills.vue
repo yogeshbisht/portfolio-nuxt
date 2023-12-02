@@ -5,7 +5,7 @@
       width="1280"
       height="640"
       alt="skills"
-      class="mb-8 py-4 border-y-2 border-accent"
+      class="mb-8 p-2 border-y-2 border-accent rounded-xl"
     />
     <div class="flex flex-col gap-8">
       <p class="md:text-lg text-slate-300">
@@ -55,7 +55,7 @@
                     :key="index"
                     :class="[
                       getAccentColor(skill.level),
-                      'sm:text-sm text-xs border px-3 py-1',
+                      'sm:text-sm text-xs border px-3 py-1 rounded-full',
                     ]"
                   >
                     {{ skill.name }}&nbsp;
@@ -76,7 +76,7 @@
         :key="index"
         :class="[
           getAccentColor(experience.name),
-          'border-y-2 px-2 sm:text-sm text-xs',
+          'border-y-2 px-2 sm:text-sm text-xs rounded-full',
         ]"
       >
         {{ experience.name }}

@@ -16,7 +16,7 @@ export default {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        accent: "#94a3b8",
+        accent: "#b0bed1",
         primary: "#0ea5e9",
         secondary: "#93c5fd",
       },

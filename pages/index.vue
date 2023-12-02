@@ -1,12 +1,14 @@
 <template>
-  <div class="container mx-auto xl:px-32 xs:px-12 px-8" ref="main">
+  <div>
     <Hero />
-    <About />
-    <Skills />
-    <ProfessionalProjects />
-    <PersonalProjects />
-    <Testimonials />
-    <Contact />
+    <div class="container mx-auto xl:px-32 xs:px-12 px-8" ref="main">
+      <About />
+      <Skills />
+      <ProfessionalProjects />
+      <PersonalProjects />
+      <Testimonials />
+      <Contact />
+    </div>
   </div>
 </template>
 
@@ -25,30 +27,12 @@ const main = ref();
 let ctx;
 
 const siteSections = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "skills",
-    title: "Skills",
-  },
-  {
-    id: "projects",
-    title: "Professional Projects",
-  },
-  {
-    id: "personal",
-    title: "Personal Projects",
-  },
-  {
-    id: "testimonials",
-    title: "Testimonials",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about" },
+  { id: "skills" },
+  { id: "projects" },
+  { id: "personal" },
+  { id: "testimonials" },
+  { id: "contact" },
 ];
 
 onMounted(() => {
@@ -70,7 +54,7 @@ onMounted(() => {
         }
       );
     });
-  });
+  }, main.value);
 });
 
 onUnmounted(() => {

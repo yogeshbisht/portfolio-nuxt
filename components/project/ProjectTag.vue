@@ -2,7 +2,7 @@
   <button
     :class="[
       buttonStyles,
-      'border-2 sm:px-6 px-4 sm:py-1 py-0.5 sm:text-base text-sm cursor-pointer transition duration-300',
+      'border-2 sm:px-6 px-4 sm:py-1 py-0.5 sm:text-base text-sm cursor-pointer transition duration-300 rounded-full',
     ]"
     @click="onClick(name)"
   >

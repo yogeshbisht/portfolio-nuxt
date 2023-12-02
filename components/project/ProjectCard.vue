@@ -1,5 +1,5 @@
 <template>
-  <div class="sm:px-4 px-2.5 sm:pb-4 pb-2.5 border-2 border-t-0 border-accent">
+  <div class="px-2.5 pb-2.5 border-2 border-t-0 border-accent rounded-xl">
     <div
       class="bg-slate-800 lg:min-h-[510px] xl:min-h-[480px] 2xl:min-h-[520px]"
     >

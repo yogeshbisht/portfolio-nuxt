@@ -1,6 +1,7 @@
 <template>
   <nav
-    class="pt-6 pb-4 xl:px-32 sm:px-12 px-8 fixed w-screen z-50 nav-background bg-gradient-to-b"
+    id="nav"
+    class="page-padding fixed h-[80px] w-screen z-50 nav-background shadow-lg"
   >
     <div
       class="flex justify-between items-center h-full gap-x-4 container mx-auto"

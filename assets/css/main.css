@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +25,7 @@ body,
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: "Roboto", sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -37,6 +39,10 @@ body {
     @apply from-transparent to-slate-700 backdrop-blur-lg;
   }
 
+  .page-padding {
+    @apply xl:px-48 lg:px-32 md:px-16 px-8;
+  }
+
   .leading-standard {
     @apply leading-normal !important;
   }
@@ -46,6 +52,6 @@ body {
   }
 
   .contact-input {
-    @apply bg-slate-800 border border-accent placeholder-slate-600 text-sm block w-full p-3 focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary;
+    @apply bg-slate-800 border border-accent placeholder-slate-600 text-sm block w-full p-3 focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary rounded-lg;
   }
 }

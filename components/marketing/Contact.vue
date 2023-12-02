@@ -38,25 +38,20 @@
             placeholder="I have a question about..."
           />
         </div>
-        <div class="mb-6">
+        <div class="mb-10">
           <label htmlFor="message" class="block mb-2 font-medium">
             Message
           </label>
           <textarea
             name="message"
             id="message"
-            rows="{5}"
+            rows="5"
             class="contact-input"
             placeholder="Your message here..."
             required
           />
         </div>
-        <button
-          type="submit"
-          class="py-2.5 px-4 font-medium w-full text-center hover:bg-secondary bg-accent text-black transition duration-300 mt-3"
-        >
-          Send Message
-        </button>
+        <ActionButton text="Send Message" @click="submitForm" />
       </form>
     </div>
   </SectionContainer>
@@ -64,4 +59,9 @@
 
 <script lang="ts" setup>
 import SectionContainer from "../ui/SectionContainer.vue";
+import ActionButton from "../ui/ActionButton.vue";
+
+const submitForm = () => {
+  console.log("Form submitted");
+};
 </script>
