@@ -1,36 +1,37 @@
 <template>
-  <div class="px-2.5 pb-2.5 border-2 border-t-0 border-accent rounded-xl">
-    <div
-      class="bg-slate-800 lg:min-h-[510px] xl:min-h-[480px] 2xl:min-h-[520px]"
-    >
-      <div
-        class="h-60 relative group"
-        :style="{
-          backgroundImage: `url(${imgUrl})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }"
-      >
-        <div
-          class="items-center justify-center absolute top-0 left-0 w-full h-full bg-slate-800 bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 cursor-pointer"
-        >
-          <NuxtLink
-            :to="webUrl"
-            class="h-12 w-12 mr-2 border-2 relative rounded-full border-slate-400 hover:border-white group/link"
-          >
-            <CodeBracketIcon
-              class="h-8 w-8 text-slate-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white"
-            />
-          </NuxtLink>
-          <NuxtLink
-            :to="`/project/${id}`"
-            class="h-12 w-12 border-2 relative rounded-full border-slate-400 hover:border-white group/link"
-          >
-            <EyeIcon
-              class="h-8 w-8 text-slate-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white"
-            />
-          </NuxtLink>
+  <div class="relative" @mouseover="showOverlay" @mouseleave="hideOverlay">
+    <div class="relative bg-slate-800 lg:min-h-[520px] z-10">
+      <div class="relative overflow-hidden">
+        <NuxtImg
+          :src="imgUrl"
+          :alt="title"
+          width="720"
+          height="450"
+          fit="cover"
+          class="cursor-pointer"
+        />
+        <div class="image-overlay" ref="imageOverlay">
+          <div class="flex gap-4">
+            <NuxtLink
+              :to="webUrl"
+              class="project-link group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <font-awesome-icon
+                icon="link"
+                size="lg"
+                class="project-icon group-hover:text-secondary"
+              ></font-awesome-icon>
+            </NuxtLink>
+            <NuxtLink :to="`/project/${id}`" class="project-link group">
+              <font-awesome-icon
+                :icon="['far', 'image']"
+                size="lg"
+                class="project-icon group-hover:text-secondary"
+              ></font-awesome-icon>
+            </NuxtLink>
+          </div>
         </div>
       </div>
       <div class="py-6 px-4">
@@ -38,11 +39,14 @@
         <p class="text-slate-500">{{ intro.join(" ") }}</p>
       </div>
     </div>
+    <div
+      class="absolute top-1/4 -bottom-2 -left-2 -right-2 border-2 border-t-0 rounded-xl"
+    />
   </div>
 </template>
 
-<script lang="ts" setup>
-import { CodeBracketIcon, EyeIcon } from "@heroicons/vue/24/outline";
+<script setup>
+import gsap from "gsap";
 
 defineProps({
   id: {
@@ -70,4 +74,32 @@ defineProps({
     required: true,
   },
 });
+
+const imageOverlay = ref();
+let ctx;
+let tl;
+
+onMounted(() => {
+  ctx = gsap.context(() => {
+    tl = gsap.timeline({ paused: true });
+    tl.to(imageOverlay.value, {
+      duration: 0.3,
+      y: 0,
+      ease: "power3.inOut",
+      opacity: 1,
+    });
+  }, imageOverlay.value);
+});
+
+onUnmounted(() => {
+  ctx.revert();
+});
+
+const showOverlay = () => {
+  tl.play();
+};
+
+const hideOverlay = () => {
+  tl.reverse();
+};
 </script>

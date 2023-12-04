@@ -132,7 +132,6 @@ export const tabData: TabData[] = [
           { name: "Route 53", level: SkillLevel.Advance },
           { name: "CloudFront", level: SkillLevel.Intermediate },
           { name: "DynamoDB", level: SkillLevel.Intermediate },
-          { name: "CloudWatch", level: SkillLevel.Beginner },
         ],
       },
       {

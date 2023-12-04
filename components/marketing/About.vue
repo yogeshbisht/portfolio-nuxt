@@ -5,11 +5,15 @@
         <div
           class="flex flex-col gap-6 2xl:text-lg sm:text-base text-sm leading-standard"
         >
-          <p v-for="(intro, index) in aboutIntroduction" :key="index">
+          <p
+            v-for="(intro, index) in aboutIntroduction"
+            :key="index"
+            class="text-accent"
+          >
             {{ intro }}
           </p>
 
-          <p>
+          <p class="text-accent">
             Consider me as your committed business partner, not merely a
             developer or designer. I am dedicated to your business&apos;s
             success and growth, focusing on making a positive impact.

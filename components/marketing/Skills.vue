@@ -9,7 +9,7 @@
       layout="responsive"
     />
     <div class="flex flex-col gap-8">
-      <p class="md:text-lg text-slate-300">
+      <p class="md:text-lg text-accent">
         In the intricate landscape of technology and design, a rich tapestry of
         skills forms the cornerstone of my expertise. With a focus on precision,
         innovation, and strategic vision, I bring a unique blend of
@@ -30,15 +30,27 @@
           >
             <p
               :class="[
-                'hover:text-slate-200 hover:border-slate-200 md:text-lg sm:text-base text-sm transition duration-300 border-b-2 py-2 px-4 rounded-xl',
+                'hover:text-accent hover:border-accent md:text-lg sm:text-base text-sm transition duration-300 border-b-2 py-2 px-4 rounded-xl',
                 selectedTab === tab.id
-                  ? 'text-slate-200 border-slate-200'
+                  ? 'text-accent border-accent'
                   : 'text-slate-600 border-slate-600',
               ]"
             >
               {{ tab.title }}
             </p>
           </button>
+        </div>
+        <div
+          class="flex xs:flex-row flex-col xs:items-center xs:justify-end items-end text-[12px] gap-3"
+        >
+          <h4>Skill Level:</h4>
+          <div
+            v-for="(experience, index) in experienceLevels"
+            :key="index"
+            :class="[getAccentColor(experience.name), 'skill-capsule']"
+          >
+            {{ experience.name }}
+          </div>
         </div>
         <div class="flex flex-col gap-8">
           <div v-for="(item, index) in tabSkills" :key="index">
@@ -60,7 +72,10 @@
                 <p
                   v-for="(skill, index) in item.items"
                   :key="index"
-                  :class="[getAccentColor(skill.level), 'skill-capsule']"
+                  :class="[
+                    getAccentColor(skill.level),
+                    'skill-capsule sm:text-sm text-xs',
+                  ]"
                 >
                   {{ skill.name }}&nbsp;
                 </p>
@@ -68,18 +83,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="flex xs:flex-row flex-col xs:items-center xs:justify-end items-end text-[12px] gap-3"
-    >
-      <h4>Skill Level:</h4>
-      <div
-        v-for="(experience, index) in experienceLevels"
-        :key="index"
-        :class="[getAccentColor(experience.name), 'skill-capsule']"
-      >
-        {{ experience.name }}
       </div>
     </div>
   </SectionContainer>
@@ -99,7 +102,6 @@ const experienceLevels: ExperienceLevel[] = [
 const selectedTab = ref("software-engineering");
 
 const handleTabChange = (tabId: string) => {
-  console.log(tabId);
   if (tabId !== selectedTab.value) {
     selectedTab.value = tabId;
   }

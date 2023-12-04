@@ -7,7 +7,7 @@
       class="flex justify-between items-center h-full gap-x-4 container mx-auto"
     >
       <div class="md:text-2xl text-xl font-medium capitalize tracking-wide">
-        Yogesh Bisht
+        YOGESH BISHT
       </div>
       <ClientOnly>
         <div class="block md:hidden">
@@ -31,17 +31,20 @@
                 class="absolute top-10 -right-2 hidden w-max xl:group-hover:flex"
               >
                 <div
-                  class="bg-accent relative flex items-center px-3 py-[6px] rounded-md"
+                  class="bg-secondary relative flex items-center px-3 py-[6px] rounded-md"
                 >
-                  <div class="text-sm text-white font-medium capitalize">
+                  <div class="text-sm text-black font-medium capitalize">
                     {{ link.name }}
                   </div>
                   <div
-                    class="border-solid border-b-accent border-b-8 border-x-transparent border-x-8 border-t-0 absolute -top-2 right-3"
+                    class="border-solid border-b-secondary border-b-8 border-x-transparent border-x-8 border-t-0 absolute -top-2 right-3"
                   />
                 </div>
               </div>
-              <font-awesome-icon :icon="link.icon"></font-awesome-icon>
+              <font-awesome-icon
+                :icon="link.icon"
+                size="lg"
+              ></font-awesome-icon>
             </NuxtLink>
           </div>
         </div>

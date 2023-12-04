@@ -203,11 +203,24 @@ export const professionalProjects: ProjectsData[] = [
 
 export const personalProjects: ProjectsData[] = [
   {
+    id: "devtrovex",
+    title: "Stack Overflow Concept",
+    tech: { full: "Next.js" },
+    intro: [
+      "This is a Stack Overflow concept built with Next.js.",
+      "Includes authentication and is fully responsive",
+      "Dynamically renders the questions and answers created by the user.",
+      "Users can upvote and downvote the questions and answers.",
+    ],
+    imgUrl: "/images/skills.png",
+    webUrl: "https://devtrovex.vercel.app/",
+  },
+  {
     id: "portfolio",
     title: "Portfolio Website",
     tech: { frontend: "React.js" },
     intro: ["Portfolio website including some standard animations"],
-    imgUrl: "https://picsum.photos/540/960",
+    imgUrl: "/images/skills.png",
     webUrl: "https://yogeshbisht.netlify.com/",
   },
   {
@@ -218,7 +231,7 @@ export const personalProjects: ProjectsData[] = [
       "This website is kind of a one page template built with basic HTML, CSS and JavaScript code.",
       "Includes carousel and is fully responsive",
     ],
-    imgUrl: "https://picsum.photos/540/960",
+    imgUrl: "/images/skills.png",
     webUrl: "https://vt-exyofin.netlify.app/",
   },
   {
@@ -230,20 +243,7 @@ export const personalProjects: ProjectsData[] = [
       "Includes authentication and is fully responsive",
       "Dynamically renders the notes created by the user and option to publish the notes.",
     ],
-    imgUrl: "https://picsum.photos/540/960",
+    imgUrl: "/images/skills.png",
     webUrl: "https://imprezion.vercel.app/",
-  },
-  {
-    id: "devtrovex",
-    title: "Stack Overflow Concept",
-    tech: { full: "Next.js" },
-    intro: [
-      "This is a Stack Overflow concept built with Next.js.",
-      "Includes authentication and is fully responsive",
-      "Dynamically renders the questions and answers created by the user.",
-      "Users can upvote and downvote the questions and answers.",
-    ],
-    imgUrl: "https://picsum.photos/540/960",
-    webUrl: "https://devtrovex.vercel.app/",
   },
 ];
