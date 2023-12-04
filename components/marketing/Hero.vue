@@ -8,7 +8,7 @@
     >
       <div class="flex flex-col flex-1 gap-2 max-w-[960px]">
         <h1
-          class="text-2xl xs:text-3xl md:text-5xl 2xl:text-6xl font-semibold text-center md:text-left leading-standard pb-4"
+          class="text-2xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center md:text-left !leading-normal pb-4"
         >
           Unlocking Excellence with <br />
           Development and Design
@@ -16,11 +16,13 @@
         <div
           v-for="(intro, index) in heroIntroduction"
           :key="index"
-          class="flex flex-col xs:text-lg sm:text-xl lg:text-2xl lg:items-start items-center gap-6 text-accent sm:leading-relaxed leading-standard mt-4 font-light"
+          class="flex flex-col xs:text-lg sm:text-xl lg:text-2xl lg:items-start items-center gap-6 text-accent sm:leading-relaxed !leading-normal mt-4 font-light"
         >
           <p class="text-center md:text-left">{{ intro }}</p>
         </div>
-        <div class="flex xs:mt-16 mt-12 gap-6 justify-start items-center">
+        <div
+          class="flex xs:mt-16 mt-12 gap-6 md:justify-start justify-center items-center"
+        >
           <ActionButton link="#projects" text="View Projects" />
           <ActionButton link="#contact" text="Contact" />
         </div>

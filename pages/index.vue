@@ -1,7 +1,7 @@
 <template>
   <div>
     <Hero />
-    <div class="container mx-auto xl:px-32 xs:px-12 px-8" ref="main">
+    <div class="container mx-auto xl:px-32 md:px-12 px-8" ref="main">
       <About />
       <Skills />
       <ProfessionalProjects />

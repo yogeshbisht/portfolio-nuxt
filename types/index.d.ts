@@ -42,3 +42,25 @@ export type SocialLink = {
   icon: any;
   link: string;
 };
+
+export type ExperienceLevel = {
+  name: SkillLevel;
+  color: string;
+};
+
+type SkillItem = {
+  name: string;
+  level: SkillLevel;
+};
+
+type Skill = {
+  title: string;
+  items?: SkillItem[];
+  description?: string;
+};
+
+export type TabData = {
+  title: string;
+  id: string;
+  skills: Skill[];
+};
