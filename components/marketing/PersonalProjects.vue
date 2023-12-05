@@ -2,14 +2,7 @@
   <SectionContainer section-id="personal" section-title="Personal Projects">
     <div class="grid 2xl:grid-cols-3 lg:grid-cols-2 gap-16">
       <div v-for="(project, index) in personalProjects" :key="index">
-        <ProjectCard
-          :id="project.id"
-          :intro="project.intro"
-          :title="project.title"
-          :webUrl="project.webUrl"
-          :mockupImg="project.mockupImg"
-          :imgUrl="project.imgUrl"
-        />
+        <ProjectCard :project="project" />
       </div>
     </div>
   </SectionContainer>

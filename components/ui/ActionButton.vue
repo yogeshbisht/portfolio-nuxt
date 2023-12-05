@@ -16,14 +16,8 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
-  link: {
-    type: String,
-    default: "",
-  },
-  text: {
-    type: String,
-    required: true,
-  },
-});
+defineProps<{
+  link?: string;
+  text: string;
+}>();
 </script>

@@ -16,23 +16,18 @@
       </button>
     </div>
     <div class="grid 2xl:grid-cols-3 lg:grid-cols-2 gap-16">
-      <div v-for="(project, index) in filteredProjects" :key="index">
-        <ProjectCard
-          :id="project.id"
-          :intro="project.intro"
-          :title="project.title"
-          :webUrl="project.webUrl"
-          :mockupImg="project.mockupImg"
-          :imgUrl="project.imgUrl"
-        />
-      </div>
+      <ProjectCard
+        v-for="(project, index) in filteredProjects"
+        :key="index"
+        :project="project"
+      />
     </div>
   </SectionContainer>
 </template>
 
 <script lang="ts" setup>
-import SectionContainer from "../ui/SectionContainer.vue";
-import ProjectCard from "../project/ProjectCard.vue";
+import SectionContainer from "~/components/ui/SectionContainer.vue";
+import ProjectCard from "~/components/project/ProjectCard.vue";
 import { professionalProjects } from "~/constants/projects";
 
 const projectTags = [

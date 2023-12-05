@@ -3,8 +3,8 @@
     <div class="relative bg-slate-800 lg:min-h-[520px] z-10">
       <div class="relative overflow-hidden">
         <NuxtImg
-          :src="imgUrl"
-          :alt="title"
+          :src="project.imgUrl"
+          :alt="project.title"
           width="720"
           height="450"
           fit="cover"
@@ -14,7 +14,8 @@
           <div class="flex gap-4">
             <ClientOnly>
               <NuxtLink
-                :to="webUrl"
+                v-if="!project.siteDown"
+                :to="project.webUrl"
                 class="project-link group"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -25,7 +26,10 @@
                   class="project-icon group-hover:text-secondary"
                 ></font-awesome-icon>
               </NuxtLink>
-              <NuxtLink :to="`/project/${id}`" class="project-link group">
+              <NuxtLink
+                :to="`/project/${project.id}`"
+                class="project-link group"
+              >
                 <font-awesome-icon
                   :icon="['far', 'image']"
                   size="lg"
@@ -37,8 +41,10 @@
         </div>
       </div>
       <div class="py-6 px-4">
-        <h5 class="text-slate-300 text-lg font-medium mb-3">{{ title }}</h5>
-        <p class="text-slate-500">{{ intro.join(" ") }}</p>
+        <h5 class="text-slate-300 text-lg font-medium mb-3">
+          {{ project.title }}
+        </h5>
+        <p class="text-slate-500">{{ project.intro.join(" ") }}</p>
       </div>
     </div>
     <div
@@ -47,39 +53,16 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import gsap from "gsap";
+import { onMounted, onUnmounted, ref } from "vue";
+import type { ProjectsData } from "~/types";
 
-defineProps({
-  id: {
-    type: String,
-    required: true,
-  },
-  intro: {
-    type: Array,
-    required: true,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  webUrl: {
-    type: String,
-    required: true,
-  },
-  mockupImg: {
-    type: String,
-    required: false,
-  },
-  imgUrl: {
-    type: String,
-    required: true,
-  },
-});
+defineProps<{ project: ProjectsData }>();
 
 const imageOverlay = ref();
-let ctx;
-let tl;
+let ctx: any;
+let tl: any;
 
 onMounted(() => {
   ctx = gsap.context(() => {
