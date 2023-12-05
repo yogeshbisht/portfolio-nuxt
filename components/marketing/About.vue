@@ -1,48 +1,59 @@
 <template>
-  <SectionContainer section-id="about" section-title="About Me">
-    <div class="flex flex-col lg:flex-row gap-12 2xl:gap-16 items-center">
-      <div class="lg:flex-1 order-2 lg:order-1">
-        <div
-          class="flex flex-col gap-6 2xl:text-lg sm:text-base text-sm leading-standard"
-        >
-          <p
-            v-for="(intro, index) in aboutIntroduction"
-            :key="index"
-            class="text-accent"
+  <section id="about" class="md:py-28 py-16" ref="aboutRef">
+    <SectionTitle title="About Me" section-id="about" />
+    <div class="relative md:mt-8 mt-6">
+      <div class="flex flex-col lg:flex-row gap-12 2xl:gap-16 items-center">
+        <div class="lg:flex-1 order-2 lg:order-1">
+          <div
+            class="flex flex-col gap-6 2xl:text-lg sm:text-base text-sm leading-standard"
           >
-            {{ intro }}
-          </p>
+            <p
+              v-for="(intro, index) in aboutIntroduction"
+              :key="index"
+              class="text-accent"
+            >
+              {{ intro }}
+            </p>
 
-          <p class="text-accent">
-            Consider me as your committed business partner, not merely a
-            developer or designer. I am dedicated to your business&apos;s
-            success and growth, focusing on making a positive impact.
-            <NuxtLink to="#contact" class="text-primary">
-              Let&apos;s connect
-            </NuxtLink>
-            and discuss your project requirements, working together to achieve
-            excellence.
-          </p>
+            <p class="text-accent">
+              Consider me as your committed business partner, not merely a
+              developer or designer. I am dedicated to your business&apos;s
+              success and growth, focusing on making a positive impact.
+              <NuxtLink to="#contact" class="text-primary">
+                Let&apos;s connect
+              </NuxtLink>
+              and discuss your project requirements, working together to achieve
+              excellence.
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative order-1 lg:order-2 lg:-mt-8 xl:w-[360px] xl:h-[640px] lg:w-[315px] lg:h-[560px] w-[270px] h-[480px]"
+        >
+          <div
+            class="absolute hidden lg:block h-full w-full -right-3 -bottom-3 border-accent border-2 z-10 rounded-lg"
+          />
+          <NuxtImg
+            src="/images/yogesh_about.png"
+            alt="profile image"
+            class="xl:w-[360px] xl:h-[640px] lg:w-[315px] lg:h-[560px] w-[270px] h-[480px] z-10 relative rounded-lg"
+          />
         </div>
       </div>
-      <div
-        class="relative order-1 lg:order-2 lg:-mt-8 xl:w-[360px] xl:h-[640px] lg:w-[315px] lg:h-[560px] w-[270px] h-[480px]"
-      >
-        <div
-          class="absolute hidden lg:block h-full w-full -right-3 -bottom-3 border-accent border-2 z-10 rounded-lg"
-        />
-        <NuxtImg
-          src="/images/yogesh_about.png"
-          alt="profile image"
-          class="xl:w-[360px] xl:h-[640px] lg:w-[315px] lg:h-[560px] w-[270px] h-[480px] z-10 relative rounded-lg"
-        />
-      </div>
     </div>
-  </SectionContainer>
+  </section>
 </template>
 
 <script lang="ts" setup>
-import SectionContainer from "../ui/SectionContainer.vue";
+import useScrollStore from "~/store/scroll";
+import SectionTitle from "~/components/ui/SectionTitle.vue";
+
+const store = useScrollStore();
+const aboutRef = ref<HTMLElement | null>(null);
+
+onMounted(() => {
+  store.setAboutSectionTop(aboutRef.value?.offsetTop ?? 0);
+});
 
 const aboutIntroduction = [
   "I am a dedicated professional specializing in development and design, with an unwavering commitment to excellence. With a profound understanding of technology and aesthetics, I craft innovative solutions that seamlessly merge form and function. As a seasoned software engineer, I bring extensive experience in coding, web development, and software architecture to your projects.",

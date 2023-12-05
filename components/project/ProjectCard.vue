@@ -12,25 +12,27 @@
         />
         <div class="image-overlay" ref="imageOverlay">
           <div class="flex gap-4">
-            <NuxtLink
-              :to="webUrl"
-              class="project-link group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <font-awesome-icon
-                icon="link"
-                size="lg"
-                class="project-icon group-hover:text-secondary"
-              ></font-awesome-icon>
-            </NuxtLink>
-            <NuxtLink :to="`/project/${id}`" class="project-link group">
-              <font-awesome-icon
-                :icon="['far', 'image']"
-                size="lg"
-                class="project-icon group-hover:text-secondary"
-              ></font-awesome-icon>
-            </NuxtLink>
+            <ClientOnly>
+              <NuxtLink
+                :to="webUrl"
+                class="project-link group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <font-awesome-icon
+                  icon="link"
+                  size="lg"
+                  class="project-icon group-hover:text-secondary"
+                ></font-awesome-icon>
+              </NuxtLink>
+              <NuxtLink :to="`/project/${id}`" class="project-link group">
+                <font-awesome-icon
+                  :icon="['far', 'image']"
+                  size="lg"
+                  class="project-icon group-hover:text-secondary"
+                ></font-awesome-icon>
+              </NuxtLink>
+            </ClientOnly>
           </div>
         </div>
       </div>

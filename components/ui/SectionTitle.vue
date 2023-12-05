@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { navData } from "~/constants";
+import { headerData } from "~/constants";
 
 type SectionTitleProps = {
   sectionId?: string;
@@ -32,5 +32,5 @@ type SectionTitleProps = {
 
 const { sectionId, small, title, subtitle } = defineProps<SectionTitleProps>();
 
-const sectionIcon = navData.find((nav) => nav.id === sectionId)?.icon;
+const sectionIcon = headerData.find((header) => header.id === sectionId)?.icon;
 </script>

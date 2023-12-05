@@ -11,5 +11,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxt/image", "nuxt-swiper"],
+  modules: ["@nuxt/image", "nuxt-swiper", "@pinia/nuxt"],
 });

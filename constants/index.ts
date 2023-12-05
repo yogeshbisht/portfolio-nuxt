@@ -1,12 +1,6 @@
-import type { ExperienceLevel, NavData, SocialLink, TabData } from "~/types";
+import type { NavData, SocialLink, TabData } from "~/types";
 
-export const navData: NavData[] = [
-  {
-    id: "home",
-    name: "Home",
-    path: "/",
-    icon: "home",
-  },
+export const headerData: NavData[] = [
   {
     id: "about",
     name: "About Me",

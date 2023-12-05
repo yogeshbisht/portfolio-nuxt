@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 :root {
@@ -35,10 +39,6 @@ body {
 }
 
 @layer components {
-  .nav-background {
-    @apply from-transparent to-slate-700 backdrop-blur-lg;
-  }
-
   .page-padding {
     @apply xl:px-48 lg:px-32 md:px-16 px-8;
   }
@@ -60,7 +60,7 @@ body {
   }
 
   .project-link {
-    @apply w-16 flex justify-center items-center p-2 rounded-xl border-y-2 transition-all duration-300 ease-in-out hover:border-secondary hover:text-secondary;
+    @apply w-16 flex justify-center items-center p-2 rounded-xl border-accent border-y-2 transition-all duration-300 ease-in-out hover:border-secondary hover:text-secondary;
   }
 
   .project-icon {
