@@ -17,8 +17,8 @@ export default {
       },
       colors: {
         accent: "#b0bed1",
-        primary: "#0ea5e9",
-        secondary: "#93c5fd",
+        brand: "#0ea5e9",
+        support: "#93c5fd",
       },
       screens: {
         xs: "475px",

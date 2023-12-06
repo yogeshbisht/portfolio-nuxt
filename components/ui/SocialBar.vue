@@ -16,7 +16,7 @@
             :to="social.link"
             target="_blank"
             rel="noopener"
-            class="text-accent hover:text-secondary transition-all duration-300 cursor-pointer"
+            class="text-accent hover:text-support transition-all duration-300 cursor-pointer"
           >
             <font-awesome-icon
               :icon="['fab', social.icon]"

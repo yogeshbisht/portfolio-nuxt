@@ -48,11 +48,11 @@ body {
   }
 
   .swiper-navigation {
-    @apply absolute top-[50%] transform translate-y-[-50%] cursor-pointer z-20 text-secondary;
+    @apply absolute top-[50%] transform translate-y-[-50%] cursor-pointer z-20 text-support;
   }
 
   .contact-input {
-    @apply bg-slate-800 border border-accent placeholder-slate-600 text-sm block w-full p-3 focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary rounded-lg;
+    @apply bg-slate-800 border border-accent placeholder-slate-600 text-sm block w-full p-3 focus:border-support focus:outline-none focus:ring-1 focus:ring-support rounded-lg;
   }
 
   .image-overlay {
@@ -60,7 +60,7 @@ body {
   }
 
   .project-link {
-    @apply w-16 flex justify-center items-center p-2 rounded-xl border-accent border-y-2 transition-all duration-300 ease-in-out hover:border-secondary hover:text-secondary;
+    @apply w-16 flex justify-center items-center p-2 rounded-xl border-accent border-y-2 transition-all duration-300 ease-in-out hover:border-support hover:text-support;
   }
 
   .project-icon {

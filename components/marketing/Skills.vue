@@ -94,8 +94,8 @@ import type { ExperienceLevel } from "~/types";
 import { SkillLevel, tabData } from "~/constants";
 
 const experienceLevels: ExperienceLevel[] = [
-  { name: SkillLevel.Advance, color: "bg-primary" },
-  { name: SkillLevel.Intermediate, color: "bg-secondary" },
+  { name: SkillLevel.Advance, color: "bg-brand" },
+  { name: SkillLevel.Intermediate, color: "bg-support" },
   { name: SkillLevel.Beginner, color: "bg-accent" },
 ];
 
@@ -112,9 +112,9 @@ const getAccentColor = (skill: SkillLevel) => {
     case SkillLevel.Beginner:
       return "border-accent/70 text-accent/70";
     case SkillLevel.Intermediate:
-      return "border-secondary text-secondary";
+      return "border-support text-support";
     case SkillLevel.Advance:
-      return "border-primary text-primary";
+      return "border-brand text-brand";
   }
 };
 

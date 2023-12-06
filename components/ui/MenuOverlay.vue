@@ -3,7 +3,7 @@
     <div v-for="link in links" :key="link.id">
       <NuxtLink
         :to="link.path"
-        class="block sm:text-lg hover:text-secondary transition duration-300"
+        class="block sm:text-lg hover:text-support transition duration-300"
         @click="onClick()"
       >
         {{ link.name }}

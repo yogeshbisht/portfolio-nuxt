@@ -23,7 +23,7 @@
                 <font-awesome-icon
                   icon="link"
                   size="lg"
-                  class="project-icon group-hover:text-secondary"
+                  class="project-icon group-hover:text-support"
                 ></font-awesome-icon>
               </NuxtLink>
               <NuxtLink
@@ -33,7 +33,7 @@
                 <font-awesome-icon
                   :icon="['far', 'image']"
                   size="lg"
-                  class="project-icon group-hover:text-secondary"
+                  class="project-icon group-hover:text-support"
                 ></font-awesome-icon>
               </NuxtLink>
             </ClientOnly>

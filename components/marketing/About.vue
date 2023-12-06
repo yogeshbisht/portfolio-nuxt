@@ -19,7 +19,7 @@
               Consider me as your committed business partner, not merely a
               developer or designer. I am dedicated to your business&apos;s
               success and growth, focusing on making a positive impact.
-              <NuxtLink to="#contact" class="text-primary">
+              <NuxtLink to="#contact" class="text-brand">
                 Let&apos;s connect
               </NuxtLink>
               and discuss your project requirements, working together to achieve

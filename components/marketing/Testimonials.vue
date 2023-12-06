@@ -23,7 +23,7 @@
               >
                 {{ testimonial.text }}
               </p>
-              <p class="text-right mt-4 text-secondary sm:text-base text-sm">
+              <p class="text-right mt-4 text-support sm:text-base text-sm">
                 - {{ testimonial.person }}, {{ testimonial.org }}
               </p>
             </div>

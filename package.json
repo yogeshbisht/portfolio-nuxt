@@ -25,9 +25,11 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.0",
     "@fortawesome/free-solid-svg-icons": "^6.5.0",
     "@fortawesome/vue-fontawesome": "^3.0.5",
+    "@nuxt/ui": "^2.11.0",
     "@pinia/nuxt": "^0.5.1",
     "gsap": "^3.12.3",
     "nuxt-swiper": "^1.2.2",
-    "pinia": "^2.1.7"
+    "pinia": "^2.1.7",
+    "zod": "^3.22.4"
   }
 }

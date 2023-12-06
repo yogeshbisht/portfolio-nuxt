@@ -28,20 +28,20 @@
           <div v-for="link in headerData" :key="link.name">
             <NuxtLink
               :to="link.path"
-              class="relative flex items-center group hover:text-secondary transition-colors duration-300"
-              :class="{ 'text-secondary': link.path === 'home' }"
+              class="relative flex items-center group hover:text-support transition-colors duration-300"
+              :class="{ 'text-support': link.path === 'home' }"
             >
               <div
                 class="absolute top-10 -right-2 hidden w-max xl:group-hover:flex"
               >
                 <div
-                  class="bg-secondary relative flex items-center px-3 py-[6px] rounded-md"
+                  class="bg-support relative flex items-center px-3 py-[6px] rounded-md"
                 >
                   <div class="text-sm text-black font-medium capitalize">
                     {{ link.name }}
                   </div>
                   <div
-                    class="border-solid border-b-secondary border-b-8 border-x-transparent border-x-8 border-t-0 absolute -top-2 right-3"
+                    class="border-solid border-b-support border-b-8 border-x-transparent border-x-8 border-t-0 absolute -top-2 right-3"
                   />
                 </div>
               </div>
