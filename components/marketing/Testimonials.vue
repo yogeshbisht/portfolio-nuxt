@@ -80,6 +80,7 @@ const testimonials: Testimonial[] = [
 
 <style>
 .swiper-slide {
+  border-radius: 1rem;
   height: auto !important;
   background-color: #1e293b;
 }

@@ -48,7 +48,7 @@
       </div>
     </div>
     <div
-      class="absolute top-1/4 -bottom-2 -left-2 -right-2 border-2 border-t-0 rounded-xl"
+      class="absolute top-1/4 -bottom-2 -left-2 -right-2 border-2 border-t-0 border-accent rounded-xl"
     />
   </div>
 </template>
