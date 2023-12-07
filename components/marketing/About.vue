@@ -5,7 +5,7 @@
       <div class="flex flex-col lg:flex-row gap-12 2xl:gap-16 items-center">
         <div class="lg:flex-1 order-2 lg:order-1">
           <div
-            class="flex flex-col gap-6 2xl:text-lg sm:text-base text-sm leading-standard"
+            class="flex flex-col gap-6 2xl:text-lg sm:text-base text-sm leading-normal!"
           >
             <p
               v-for="(intro, index) in aboutIntroduction"

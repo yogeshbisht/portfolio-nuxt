@@ -12,8 +12,8 @@ export const professionalProjects: ProjectsData[] = [
     },
     intro: [
       "A learning management system website created for Teach Simple LLC.",
-      "The website provides a common platform where teachers can upload their products",
-      "A user gets access to unlimited resources such as activities, worksheets, ebooks, book companions etc. in different languages",
+      "The website provides a common platform where teachers can upload their products.",
+      "A user gets access to unlimited resources such as activities, worksheets, ebooks, book companions etc. in different languages.",
     ],
     imgUrl: "/images/projects/teachsimple.jpg",
     mockupImg: "/images/mockup/teachsimple.png",
@@ -31,7 +31,7 @@ export const professionalProjects: ProjectsData[] = [
     },
     intro: [
       "HomeWayz is the first of its kind workflow solution. It is established in 2018 by an Agent for Agents.",
-      "It's a real estate application consisting of a huge database of active properties for rent and sale",
+      "It's a real estate application consisting of a huge database of active properties for rent and sale.",
       "I handled the frontend development in agent/client dashboard system.",
     ],
     features: [
@@ -99,9 +99,9 @@ export const professionalProjects: ProjectsData[] = [
       mobile: "React Native",
     },
     intro: [
-      "The application focuses on managing cashflow for present and future based on your current entries",
-      "Consists of utilities like guided tour, video player, drag/drop, Bank-Feed API Integration and more",
-      "Involves complex real time transactional calculations",
+      "The application focuses on managing cashflow for present and future based on your current entries.",
+      "Consists of utilities like guided tour, video player, drag/drop, Bank-Feed API Integration and more.",
+      "Involves complex real time transactional calculations.",
     ],
     features: [
       {
@@ -140,9 +140,9 @@ export const professionalProjects: ProjectsData[] = [
       backend: "PHP",
     },
     intro: [
-      "The organization provides affordable solutions to financial security of customers",
-      "Consists of a variety of insurance and loan options which users can opt based on their needs",
-      "Includes calculations and comparisons of insurance options provided by other brands",
+      "The organization provides affordable solutions to financial security of customers.",
+      "Consists of a variety of insurance and loan options which users can opt based on their needs.",
+      "Includes calculations and comparisons of insurance options provided by other brands.",
     ],
     features: [
       {
@@ -180,7 +180,7 @@ export const professionalProjects: ProjectsData[] = [
     },
     intro: [
       "Website to search any of the financial institutions and their details.",
-      "The project was ended halfway due to unavailability of client",
+      "The project was ended halfway due to unavailability of client.",
     ],
     features: [
       {
@@ -207,8 +207,8 @@ export const personalProjects: ProjectsData[] = [
     title: "Stack Overflow Concept",
     tech: { full: "Next.js" },
     intro: [
-      "This is a Stack Overflow concept built with Next.js.",
-      "Includes authentication and is fully responsive",
+      "This is a Stack Overflow concept built with NextJS.",
+      "Includes authentication and is fully responsive.",
       "Dynamically renders the questions and answers created by the user.",
       "Users can upvote and downvote the questions and answers.",
     ],
@@ -219,7 +219,7 @@ export const personalProjects: ProjectsData[] = [
     id: "portfolio",
     title: "Portfolio Website",
     tech: { frontend: "React.js" },
-    intro: ["Portfolio website including some standard animations"],
+    intro: ["Portfolio website including some standard animations."],
     imgUrl: "/images/skills.png",
     webUrl: "https://yogeshbisht.netlify.com/",
   },
@@ -229,7 +229,7 @@ export const personalProjects: ProjectsData[] = [
     tech: { frontend: "Vue.js" },
     intro: [
       "This website is kind of a one page template built with basic HTML, CSS and JavaScript code.",
-      "Includes carousel and is fully responsive",
+      "Includes carousel and is fully responsive.",
     ],
     imgUrl: "/images/skills.png",
     webUrl: "https://vt-exyofin.netlify.app/",
@@ -239,11 +239,14 @@ export const personalProjects: ProjectsData[] = [
     title: "Note Creating App",
     tech: { full: "Next.js" },
     intro: [
-      "This is a note creating app built with Next.js.",
-      "Includes authentication and is fully responsive",
+      "This is a note creating app built with NextJS.",
+      "Includes authentication and is fully responsive.",
       "Dynamically renders the notes created by the user and option to publish the notes.",
     ],
     imgUrl: "/images/skills.png",
     webUrl: "https://imprezion.vercel.app/",
   },
 ];
+
+export const allProjects: ProjectsData[] =
+  professionalProjects.concat(personalProjects);

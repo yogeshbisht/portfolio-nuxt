@@ -1,6 +1,5 @@
 <template>
   <main class="flex min-h-screen flex-col bg-slate-900 text-slate-200">
-    <Header />
     <SocialBar />
     <NuxtPage />
     <Footer />
@@ -8,7 +7,6 @@
 </template>
 
 <script lang="ts" setup>
-import Header from "~/components/ui/Header.vue";
 import SocialBar from "~/components/ui/SocialBar.vue";
 import Footer from "~/components/ui/Footer.vue";
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <Hero />
     <div class="container mx-auto xl:px-32 md:px-12 px-8" ref="main">
       <About />
@@ -15,6 +16,7 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
 import gsap from "gsap";
+import Header from "~/components/ui/Header.vue";
 import Hero from "~/components/marketing/Hero.vue";
 import About from "~/components/marketing/About.vue";
 import Skills from "~/components/marketing/Skills.vue";
