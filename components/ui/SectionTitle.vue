@@ -8,7 +8,7 @@
       />
     </ClientOnly>
     <h1
-      class="text-2xl xs:text-3xl md:text-4xl 2xl:text-6xl font-semibold text-center lg:text-left leading-standard"
+      class="text-2xl xs:text-3xl md:text-4xl 2xl:text-6xl font-semibold text-center lg:text-left leading-normal!"
       :class="{
         'lg:text-5xl': !small,
         'xl:text-5xl': small,

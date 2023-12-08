@@ -1,11 +1,3 @@
-type TechData = {
-  frontend?: string;
-  backend?: string;
-  mobile?: string;
-  database?: string;
-  full?: string;
-};
-
 type FeatureData = {
   id: string;
   name: string;
@@ -16,17 +8,16 @@ type FeatureData = {
 export type ProjectsData = {
   id: string;
   title: string;
-  hero?: boolean;
-  tech: TechData;
+  brand?: string;
+  type?: "professional" | "personal";
+  tech: string[];
   intro: string[];
   features?: FeatureData[];
   imgUrl: string;
   video?: string;
-  homeUrl?: string;
+  appUrl?: string;
   webUrl: string;
-  tag?: string[];
   siteDown?: boolean;
-  brand?: string;
   mockupImg?: string;
 };
 
