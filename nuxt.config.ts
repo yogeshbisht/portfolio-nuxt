@@ -12,4 +12,10 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxt/image", "nuxt-swiper", "@pinia/nuxt", "@nuxt/ui"],
+  image: {
+    provider: "netlify",
+    netlify: {
+      baseURL: process.env.HOME_URL,
+    },
+  },
 });
