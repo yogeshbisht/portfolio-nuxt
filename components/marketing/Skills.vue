@@ -21,7 +21,7 @@
         visuals. Below, you&apos;ll find a detailed breakdown of my skill set,
         showcasing the tools that power my journey in these domains.
       </p>
-      <div class="pt-4 pb-12">
+      <div class="pt-4">
         <div class="flex flex-row justify-center sm:gap-8 gap-6 mb-8">
           <button
             v-for="tab in tabData"

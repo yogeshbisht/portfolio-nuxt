@@ -21,10 +21,9 @@ export type ProjectsData = {
   mockupImg?: string;
 };
 
-export type NavData = {
+export type HeaderData = {
   id: string;
   name: string;
-  path: string;
   icon: any;
 };
 

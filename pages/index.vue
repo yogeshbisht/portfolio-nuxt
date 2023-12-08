@@ -25,31 +25,21 @@ import Skills from "~/components/marketing/Skills.vue";
 import Projects from "~/components/marketing/Projects.vue";
 import Testimonials from "~/components/marketing/Testimonials.vue";
 import Contact from "~/components/marketing/Contact.vue";
+import { headerData } from "~/constants";
 
 const main = ref();
 let ctx;
 
-const siteSections = [
-  { id: "about" },
-  { id: "skills" },
-  { id: "professional" },
-  { id: "personal" },
-  { id: "testimonials" },
-  { id: "contact" },
-];
+const siteSections = headerData.map((link) => ({ id: link.id }));
 
 onMounted(() => {
   ctx = gsap.context(() => {
     siteSections.forEach((section) => {
       gsap.fromTo(
         `#${section.id}`,
-        {
-          opacity: 0,
-          y: 200,
-        },
+        { opacity: 0 },
         {
           opacity: 1,
-          y: 0,
           duration: 1,
           ease: "power3.inOut",
           scrollTrigger: {

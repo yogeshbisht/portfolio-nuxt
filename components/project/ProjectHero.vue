@@ -1,28 +1,28 @@
 <template>
   <div
     class="relative page-padding py-40 min-h-screen bg-cover bg-no-repeat bg-center overflow-hidden"
-    :style="{ backgroundImage: `url(${project.imgUrl})` }"
+    :style="{ backgroundImage: `url(/images/projects/${project.imgUrl})` }"
   >
-    <div class="absolute inset-0 bg-black opacity-90"></div>
+    <div class="absolute inset-0 bg-black opacity-95"></div>
     <ClientOnly>
       <div
-        class="fixed left-[2%] top-[40%]"
+        class="fixed left-[2%] top-[45%] w-12 h-12 flex justify-center items-center group cursor-pointer"
         @click="onClickProjectNavigate(projectNumber, 'prev')"
       >
         <font-awesome-icon
           icon="chevron-left"
           size="2xl"
-          class="text-accent duration-300 transition-all hover:text-support ease-in-out cursor-pointer"
+          class="duration-300 transition-all group-hover:text-support ease-in-out group-hover:scale-105"
         ></font-awesome-icon>
       </div>
       <div
-        class="fixed right-[2%] top-[40%]"
+        class="fixed right-[2%] top-[45%] w-12 h-12 flex justify-center items-center group cursor-pointer"
         @click="onClickProjectNavigate(projectNumber, 'next')"
       >
         <font-awesome-icon
           icon="chevron-right"
           size="2xl"
-          class="text-accent duration-300 transition-all hover:text-support ease-in-out cursor-pointer"
+          class="duration-300 transition-all group-hover:text-support ease-in-out group-hover:scale-105"
         ></font-awesome-icon>
       </div>
     </ClientOnly>
@@ -33,11 +33,12 @@
         <h1 class="text-2xl md:text-3xl xl:text-4xl text-center xl:mb-2">
           {{ project.title }}
         </h1>
-        <h3 v-if="project.brand" class="xl:text-xl text-center text-support">
-          ({{ project.brand }})
+        <h3 class="xl:text-xl text-center text-support capitalize">
+          ({{ `${project.type} Project` }}
+          {{ project.brand ? `for ${project.brand}` : "" }})
         </h3>
         <NuxtImg
-          :src="project.mockupImg || project.imgUrl"
+          :src="`/images/mockup/${project.mockupImg}`"
           width="1280"
           alt="project-hero"
           class="mx-auto block mt-4"
@@ -65,7 +66,7 @@
         >
           <NuxtLink
             :to="project.webUrl"
-            class="py-2 md:w-[240px] w-[200px] flex justify-center items-center gap-3 md:text-lg text-md text-center border hover:border-support hover:text-support transition duration-300 rounded-lg shadow-lg"
+            class="py-1.5 md:w-[240px] w-[200px] flex justify-center items-center gap-2 text-center border hover:border-support hover:text-support transition duration-300 rounded-lg shadow-lg"
             target="_blank"
             rel="noopener noreferrer"
           >

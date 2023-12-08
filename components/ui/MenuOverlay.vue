@@ -2,7 +2,7 @@
   <div class="container flex flex-col gap-3 py-4 items-end md:hidden">
     <div v-for="link in links" :key="link.id">
       <NuxtLink
-        :to="link.path"
+        :to="`#${link.id}`"
         class="block sm:text-lg hover:text-support transition duration-300"
         @click="onClick()"
       >
@@ -14,12 +14,12 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import type { NavData } from "~/types";
+import type { HeaderData } from "~/types";
 
 export default defineComponent({
   props: {
     links: {
-      type: Array as () => NavData[],
+      type: Array as () => HeaderData[],
       required: true,
     },
     onClick: {

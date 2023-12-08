@@ -1,40 +1,34 @@
-import type { NavData, SocialLink, TabData } from "~/types";
+import type { HeaderData, SocialLink, TabData } from "~/types";
 
-export const headerData: NavData[] = [
+export const headerData: HeaderData[] = [
   {
     id: "about",
     name: "About Me",
-    path: "#about",
     icon: "user",
   },
   {
     id: "skills",
     name: "Skills",
-    path: "#skills",
     icon: "graduation-cap",
   },
   {
-    id: "projects",
-    name: "Professional Works",
-    path: "#projects",
+    id: "professional",
+    name: "Professional Projects",
     icon: "code",
   },
   {
     id: "personal",
     name: "Personal Projects",
-    path: "#personal",
     icon: "book",
   },
   {
     id: "testimonials",
     name: "Testimonials",
-    path: "#testimonials",
     icon: "comment-dots",
   },
   {
     id: "contact",
     name: "Contact",
-    path: "#contact",
     icon: "envelope",
   },
 ];

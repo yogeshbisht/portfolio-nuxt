@@ -27,9 +27,8 @@
         >
           <div v-for="link in headerData" :key="link.name">
             <NuxtLink
-              :to="link.path"
+              :to="`#${link.id}`"
               class="relative flex items-center group hover:text-support transition-colors duration-300"
-              :class="{ 'text-support': link.path === 'home' }"
             >
               <div
                 class="absolute top-10 -right-2 hidden w-max xl:group-hover:flex"

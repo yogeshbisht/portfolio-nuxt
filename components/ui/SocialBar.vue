@@ -9,21 +9,21 @@
         <div
           class="mx-auto container flex flex-col items-center justify-center w-full gap-y-8"
         >
-          <div class="w-[2px] h-12 bg-accent" />
+          <div class="w-[2px] h-12 bg-white" />
           <NuxtLink
             v-for="social in socialLinks"
             :key="social.name"
             :to="social.link"
             target="_blank"
             rel="noopener"
-            class="text-accent hover:text-support transition-all duration-300 cursor-pointer"
+            class="hover:text-support transition-all duration-300 cursor-pointer"
           >
             <font-awesome-icon
               :icon="['fab', social.icon]"
               size="xl"
             ></font-awesome-icon>
           </NuxtLink>
-          <div class="w-[2px] h-12 bg-accent" />
+          <div class="w-[2px] h-12 bg-white" />
         </div>
       </ClientOnly>
     </div>

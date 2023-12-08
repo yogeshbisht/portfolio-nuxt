@@ -3,7 +3,7 @@
     <div class="relative bg-slate-800 lg:min-h-[520px] xl:min-h-[480px] z-10">
       <div class="relative overflow-hidden">
         <NuxtImg
-          :src="project.imgUrl"
+          :src="`/images/projects/${project.imgUrl}`"
           :alt="project.title"
           width="720"
           height="450"
