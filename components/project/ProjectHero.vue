@@ -6,7 +6,7 @@
     <div class="absolute inset-0 bg-black opacity-90"></div>
     <ClientOnly>
       <div
-        class="absolute left-[2%] top-[40%]"
+        class="fixed left-[2%] top-[40%]"
         @click="onClickProjectNavigate(projectNumber, 'prev')"
       >
         <font-awesome-icon
@@ -16,7 +16,7 @@
         ></font-awesome-icon>
       </div>
       <div
-        class="absolute right-[2%] top-[40%]"
+        class="fixed right-[2%] top-[40%]"
         @click="onClickProjectNavigate(projectNumber, 'next')"
       >
         <font-awesome-icon
@@ -27,7 +27,7 @@
       </div>
     </ClientOnly>
     <div
-      class="flex flex-col gap-8 px-4 z-10 relative container justify-between items-center"
+      class="flex flex-col gap-8 px-4 z-10 relative container justify-between items-center mx-auto"
     >
       <div class="flex flex-col flex-1 gap-2 mx-auto">
         <h1 class="text-2xl md:text-3xl xl:text-4xl text-center xl:mb-2">
