@@ -32,7 +32,7 @@ let ctx;
 const siteSections = [
   { id: "about" },
   { id: "skills" },
-  { id: "projects" },
+  { id: "professional" },
   { id: "personal" },
   { id: "testimonials" },
   { id: "contact" },
@@ -45,12 +45,13 @@ onMounted(() => {
         `#${section.id}`,
         {
           opacity: 0,
-          y: 100,
+          y: 200,
         },
         {
           opacity: 1,
           y: 0,
           duration: 1,
+          ease: "power3.inOut",
           scrollTrigger: {
             trigger: `#${section.id}`,
           },
