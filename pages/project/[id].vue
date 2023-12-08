@@ -10,42 +10,60 @@
       >
         <NuxtLink
           to="/"
-          class="md:text-2xl text-xl font-medium capitalize tracking-wide cursor-pointer"
+          class="md:text-2xl text-xl font-medium capitalize tracking-wide cursor-pointer group transition duration-300"
         >
-          YOGESH BISHT
+          <ClientOnly
+            ><font-awesome-icon
+              icon="home"
+              size="xs"
+              class="mr-3 transition-all duration-300 ease-in-out"
+            ></font-awesome-icon
+            >YOGESH BISHT</ClientOnly
+          >
         </NuxtLink>
       </div>
     </header>
     <ProjectHero
-      :title="title"
-      :brand="brand"
-      :intro="intro"
-      :web-url="webUrl"
-      :mockup-img="mockupImg"
-      :img-url="imgUrl"
+      v-if="project"
+      :project="project"
+      :project-number="projectNumber"
+      @click-project-navigate="onClickProjectNavigate"
     />
   </div>
 </template>
 
 <script lang="ts" setup>
 import ProjectHero from "~/components/project/ProjectHero.vue";
-import { allProjects } from "~/constants/projects";
+import projects from "~/constants/projects";
 
 const route = useRoute();
 const router = useRouter();
 
-const project = allProjects.find((project) => project.id === route.params.id);
+const project = projects.find((project) => project.id === route.params.id);
+const projectNumber = projects.findIndex(
+  (project) => project.id === route.params.id
+);
 
 if (!project) {
   router.push({ name: "404" });
 }
 
-const { title, brand, intro, webUrl, mockupImg, imgUrl } = project!;
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+const onClickProjectNavigate = (index: number, sequence: string) => {
+  console.log(sequence);
+  if (sequence === "prev") {
+    if (index === 0) {
+      router.push({
+        path: `/project/${projects[projects.length - 1].id}`,
+      });
+    } else {
+      router.push({
+        path: `/project/${projects[index - 1].id}`,
+      });
+    }
+  } else if (index === projects.length - 1) {
+    router.push({ path: `/project/${projects[0].id}` });
+  } else {
+    router.push({ path: `/project/${projects[index + 1].id}` });
+  }
 };
 </script>

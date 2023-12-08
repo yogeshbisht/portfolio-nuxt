@@ -1,12 +1,13 @@
 <template>
   <div>
     <Header />
+    <SocialBar />
     <Hero />
     <div class="container mx-auto xl:px-32 md:px-12 px-8" ref="main">
       <About />
       <Skills />
-      <ProfessionalProjects />
-      <PersonalProjects />
+      <Projects type="professional" />
+      <Projects type="personal" />
       <Testimonials />
       <Contact />
     </div>
@@ -17,11 +18,11 @@
 import { onMounted, onUnmounted } from "vue";
 import gsap from "gsap";
 import Header from "~/components/ui/Header.vue";
+import SocialBar from "~/components/ui/SocialBar.vue";
 import Hero from "~/components/marketing/Hero.vue";
 import About from "~/components/marketing/About.vue";
 import Skills from "~/components/marketing/Skills.vue";
-import ProfessionalProjects from "~/components/marketing/ProfessionalProjects.vue";
-import PersonalProjects from "~/components/marketing/PersonalProjects.vue";
+import Projects from "~/components/marketing/Projects.vue";
 import Testimonials from "~/components/marketing/Testimonials.vue";
 import Contact from "~/components/marketing/Contact.vue";
 

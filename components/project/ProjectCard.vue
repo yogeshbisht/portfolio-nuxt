@@ -8,7 +8,6 @@
           width="720"
           height="450"
           fit="cover"
-          class="cursor-pointer"
         />
         <div class="image-overlay" ref="imageOverlay">
           <div class="flex gap-4">
