@@ -1,14 +1,14 @@
 <template>
   <div
-    class="relative page-padding h-screen flex justify-center items-center bg-[url('/images/hero.jpg')] bg-cover bg-no-repeat bg-center overflow-hidden"
+    class="relative min-h-screen flex justify-center items-center bg-[url('/images/hero.jpg')] bg-cover bg-no-repeat bg-center overflow-hidden"
   >
     <div class="absolute inset-0 bg-black opacity-90"></div>
     <div
-      class="flex gap-16 z-10 relative container justify-between items-center"
+      class="flex z-10 relative py-32 justify-center items-center section-container"
     >
-      <div class="flex flex-col flex-1 gap-2 max-w-[960px]">
+      <div class="flex flex-col flex-1 gap-2 max-w-[1280px]">
         <h1
-          class="text-2xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center md:text-left !leading-normal pb-4"
+          class="text-2xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold !leading-normal pb-2 md:pb-4 text-center md:text-start"
         >
           Unlocking Excellence with <br />
           Development and Design
@@ -16,12 +16,12 @@
         <div
           v-for="(intro, index) in heroIntroduction"
           :key="index"
-          class="flex flex-col xs:text-lg sm:text-xl lg:text-2xl lg:items-start items-center gap-6 text-accent sm:leading-relaxed !leading-normal mt-4 font-light"
+          class="xs:text-lg sm:text-xl lg:text-2xl gap-6 text-accent sm:leading-relaxed !leading-normal mt-4 font-light text-center md:text-start"
         >
-          <p class="text-center md:text-left">{{ intro }}</p>
+          {{ intro }}
         </div>
         <div
-          class="flex xs:mt-16 mt-12 gap-6 md:justify-start justify-center items-center"
+          class="flex xs:flex-row flex-col md:mt-12 mt-8 gap-6 md:justify-start justify-center items-center"
         >
           <ActionButton link="#professional" text="View Projects" />
           <ActionButton link="#contact" text="Contact" />
@@ -30,7 +30,7 @@
     </div>
     <NuxtImg
       src="/images/name.svg"
-      class="absolute block -bottom-2 -right-2 z-10 opacity-10 max-w-4xl xl:left-auto left-[33%]"
+      class="absolute block bottom-0 -right-1 z-10 opacity-10 w-[70%] min-w-[280px]"
     />
   </div>
 </template>

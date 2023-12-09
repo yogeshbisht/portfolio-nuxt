@@ -9,7 +9,7 @@
       layout="responsive"
     />
     <div class="flex flex-col gap-8">
-      <p class="md:text-lg text-accent">
+      <p class="md:text-lg sm:text-base text-sm text-accent">
         In the intricate landscape of technology and design, a rich tapestry of
         skills forms the cornerstone of my expertise. With a focus on precision,
         innovation, and strategic vision, I bring a unique blend of
@@ -30,7 +30,7 @@
           >
             <p
               :class="[
-                'hover:text-accent hover:border-accent md:text-lg sm:text-base text-sm transition duration-300 border-b-2 py-2 px-4 rounded-xl',
+                'text-[12px] hover:text-accent hover:border-accent md:text-lg xs:text-base transition duration-300 border-b-2 py-2 px-4 rounded-xl',
                 selectedTab === tab.id
                   ? 'text-accent border-accent'
                   : 'text-slate-600 border-slate-600',
@@ -41,7 +41,7 @@
           </button>
         </div>
         <div
-          class="flex xs:flex-row flex-col xs:items-center xs:justify-end items-end text-[12px] gap-3"
+          class="flex items-center justify-end xs:text-[12px] text-[11px] gap-3 xs:mb-2 mb-4"
         >
           <h4>Skill Level:</h4>
           <div

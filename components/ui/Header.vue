@@ -1,11 +1,11 @@
 <template>
   <header
     id="header"
-    class="page-padding fixed h-[80px] w-screen backdrop-blur-lg bg-transparent shadow-lg z-50"
+    class="fixed md:h-20 h-16 w-screen backdrop-blur-lg bg-transparent shadow-lg z-50"
     ref="headerRef"
   >
     <div
-      class="flex justify-between items-center h-full gap-x-4 container mx-auto"
+      class="flex justify-between items-center h-full gap-x-4 section-container"
     >
       <div
         class="md:text-2xl text-xl font-medium capitalize tracking-wide cursor-pointer"

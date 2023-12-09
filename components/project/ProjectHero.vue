@@ -1,39 +1,41 @@
 <template>
   <div
-    class="relative page-padding py-40 min-h-screen bg-cover bg-no-repeat bg-center overflow-hidden"
+    class="relative py-40 min-h-screen bg-cover bg-no-repeat bg-center overflow-hidden"
     :style="{ backgroundImage: `url(/images/projects/${project.imgUrl})` }"
   >
     <div class="absolute inset-0 bg-black opacity-95"></div>
     <ClientOnly>
       <div
-        class="fixed left-[2%] top-[45%] w-12 h-12 flex justify-center items-center group cursor-pointer"
+        class="fixed left-[2%] top-[30%] w-10 h-10 md:w-12 md:h-12 flex justify-center items-center group cursor-pointer"
         @click="onClickProjectNavigate(projectNumber, 'prev')"
       >
         <font-awesome-icon
           icon="chevron-left"
-          size="2xl"
-          class="duration-300 transition-all group-hover:text-support ease-in-out group-hover:scale-105"
+          class="navigate-icon"
         ></font-awesome-icon>
       </div>
       <div
-        class="fixed right-[2%] top-[45%] w-12 h-12 flex justify-center items-center group cursor-pointer"
+        class="fixed right-[2%] top-[30%] w-10 h-10 md:w-12 md:h-12 flex justify-center items-center group cursor-pointer"
         @click="onClickProjectNavigate(projectNumber, 'next')"
       >
         <font-awesome-icon
           icon="chevron-right"
-          size="2xl"
-          class="duration-300 transition-all group-hover:text-support ease-in-out group-hover:scale-105"
+          class="navigate-icon"
         ></font-awesome-icon>
       </div>
     </ClientOnly>
     <div
-      class="flex flex-col gap-8 px-4 z-10 relative container justify-between items-center mx-auto"
+      class="flex flex-col gap-8 z-10 relative justify-between items-center section-container"
     >
-      <div class="flex flex-col flex-1 gap-2 mx-auto">
-        <h1 class="text-2xl md:text-3xl xl:text-4xl text-center xl:mb-2">
+      <div class="flex flex-col flex-1 gap-1 xs:gap-2 mx-auto">
+        <h1
+          class="text-xl xs:text-2xl md:text-3xl xl:text-4xl text-center xl:mb-2"
+        >
           {{ project.title }}
         </h1>
-        <h3 class="xl:text-xl text-center text-support capitalize">
+        <h3
+          class="sm:text-base text-md xl:text-xl text-center text-support capitalize"
+        >
           ({{ `${project.type} Project` }}
           {{ project.brand ? `for ${project.brand}` : "" }})
         </h3>
@@ -53,7 +55,6 @@
         />
       </div>
       <div class="flex items-center justify-center text-xs gap-3">
-        <h4 class="text-accent">Tech Stack</h4>
         <div
           v-for="(tech, index) in project.tech"
           :key="index"
@@ -63,7 +64,7 @@
         </div>
       </div>
       <p
-        class="lg:text-xl text-white font-light lg:leading-9 leading-7 text-center max-w-[960px] px-6"
+        class="text-sm md:text-base lg:text-xl text-white font-light lg:leading-9 sm:leading-7 leading-6 text-center"
       >
         {{ project.intro.join(" ") }}
       </p>

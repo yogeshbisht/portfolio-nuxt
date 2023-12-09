@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="md:py-28 py-16" ref="aboutRef">
+  <section id="about" class="section-container" ref="aboutRef">
     <SectionTitle title="About Me" section-id="about" />
     <div class="relative md:mt-8 mt-6">
       <div class="flex flex-col lg:flex-row gap-12 2xl:gap-16 items-center">
@@ -28,7 +28,7 @@
           </div>
         </div>
         <div
-          class="relative order-1 lg:order-2 lg:-mt-8 xl:w-[360px] xl:h-[640px] lg:w-[315px] lg:h-[560px] w-[270px] h-[480px]"
+          class="relative order-1 lg:order-2 lg:-mt-8 xl:w-[360px] lg:w-[280px] w-[270px] h-auto"
         >
           <div
             class="absolute hidden lg:block h-full w-full -right-3 -bottom-3 border-accent border-2 z-10 rounded-lg"
@@ -36,7 +36,7 @@
           <NuxtImg
             src="/images/yogesh_about.png"
             alt="profile image"
-            class="xl:w-[360px] xl:h-[640px] lg:w-[315px] lg:h-[560px] w-[270px] h-[480px] z-10 relative rounded-lg"
+            class="xl:w-[360px] lg:w-[280px] w-[270px] z-10 relative rounded-lg h-auto"
           />
         </div>
       </div>

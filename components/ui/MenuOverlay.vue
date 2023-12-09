@@ -1,5 +1,7 @@
 <template>
-  <div class="container flex flex-col gap-3 py-4 items-end md:hidden">
+  <div
+    class="page-padding flex flex-col gap-3 py-4 items-end md:hidden bg-black"
+  >
     <div v-for="link in links" :key="link.id">
       <NuxtLink
         :to="`#${link.id}`"

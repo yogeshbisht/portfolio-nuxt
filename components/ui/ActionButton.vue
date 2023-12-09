@@ -1,16 +1,8 @@
 <template>
-  <NuxtLink
-    v-if="link"
-    :to="link"
-    class="py-2.5 px-4 font-medium max-w-[240px] w-full text-center hover:bg-support bg-transparent text-accent hover:text-black border-accent border-2 hover:border-transparent transition duration-300 rounded-lg shadow-lg"
-  >
+  <NuxtLink v-if="link" :to="link" class="action-button max-w-[240px]">
     {{ text }}
   </NuxtLink>
-  <button
-    v-else
-    type="submit"
-    class="py-2.5 px-4 font-medium w-full text-center hover:bg-support bg-transparent text-accent hover:text-black border-accent border-2 hover:border-transparent transition duration-300 rounded-lg"
-  >
+  <button v-else type="submit" class="action-button">
     {{ text }}
   </button>
 </template>

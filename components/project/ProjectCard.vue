@@ -40,10 +40,12 @@
         </div>
       </div>
       <div class="py-6 px-4">
-        <h5 class="text-slate-300 text-lg font-medium mb-3">
+        <h5 class="text-slate-300 sm:text-lg font-medium mb-2 sm:mb-3">
           {{ project.title }}
         </h5>
-        <p class="text-slate-500">{{ project.intro.join(" ") }}</p>
+        <p class="text-sm xs:text-base text-slate-500">
+          {{ project.intro.join(" ") }}
+        </p>
       </div>
     </div>
     <div

@@ -1,9 +1,11 @@
 <template>
-  <div class="flex items-center justify-center lg:justify-start gap-x-4">
+  <div
+    class="flex items-center justify-center lg:justify-start gap-x-3 md:gap-x-4"
+  >
     <ClientOnly>
       <font-awesome-icon
         v-if="sectionIcon"
-        class="hidden lg:block text-4xl"
+        class="hidden lg:block text-xl xs:text-2xl md:text-3xl lg:text-4xl"
         :icon="sectionIcon"
       />
     </ClientOnly>

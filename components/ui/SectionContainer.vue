@@ -1,7 +1,7 @@
 <template>
-  <section :id="sectionId" class="md:py-28 py-16">
+  <section :id="sectionId" class="section-container">
     <SectionTitle :title="sectionTitle" :section-id="sectionId" />
-    <div class="relative md:mt-8 mt-6">
+    <div class="relative md:mt-8 mt-6 max-w-[1280px]">
       <slot></slot>
     </div>
   </section>

@@ -1,7 +1,7 @@
 <template>
   <SectionContainer section-id="contact" section-title="Contact Me">
     <div class="relative flex flex-col lg:flex-row lg:gap-20 gap-12">
-      <div class="text-accent leading-relaxed text-lg flex-1 text-justify">
+      <div class="text-accent leading-relaxed md:text-lg flex-1">
         Are you ready to transform your digital vision into a stunning reality?
         I&apos;m here to help. Whether you&apos;re a forward-thinking business
         in need of cutting-edge development or an executive seeking world-class
