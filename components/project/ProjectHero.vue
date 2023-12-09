@@ -37,11 +37,19 @@
           ({{ `${project.type} Project` }}
           {{ project.brand ? `for ${project.brand}` : "" }})
         </h3>
+        <div
+          v-if="isImageLoading"
+          class="flex justify-center items-center xl:min-h-[50vh] md:min-h-[40vh] min-h-[30vh]"
+        >
+          <Spinner />
+        </div>
         <NuxtImg
+          v-show="!isImageLoading"
           :src="`/images/mockup/${project.mockupImg}`"
-          width="1280"
+          width="1120"
           alt="project-hero"
           class="mx-auto block mt-4"
+          @load="() => (isImageLoading = false)"
         />
       </div>
       <div class="flex items-center justify-center text-xs gap-3">
@@ -79,6 +87,7 @@
           <NuxtLink
             v-if="project.appUrl"
             :to="project.appUrl"
+            id="project-image"
             class="py-2 flex text-support justify-center items-center gap-2 text-sm text-center hover:text-brand transition duration-300"
             target="_blank"
             rel="noopener noreferrer"
@@ -93,7 +102,10 @@
 </template>
 
 <script lang="ts" setup>
+import Spinner from "../ui/Spinner.vue";
 import type { ProjectsData } from "~/types";
+
+const isImageLoading = ref(true);
 
 defineProps({
   project: {

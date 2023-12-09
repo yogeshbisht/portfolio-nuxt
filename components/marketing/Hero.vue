@@ -23,7 +23,7 @@
         <div
           class="flex xs:mt-16 mt-12 gap-6 md:justify-start justify-center items-center"
         >
-          <ActionButton link="#projects" text="View Projects" />
+          <ActionButton link="#professional" text="View Projects" />
           <ActionButton link="#contact" text="Contact" />
         </div>
       </div>

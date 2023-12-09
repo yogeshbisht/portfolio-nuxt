@@ -49,7 +49,6 @@ if (!project) {
 }
 
 const onClickProjectNavigate = (index: number, sequence: string) => {
-  console.log(sequence);
   if (sequence === "prev") {
     if (index === 0) {
       router.push({
