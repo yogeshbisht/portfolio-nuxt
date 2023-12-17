@@ -29,6 +29,14 @@
       :project-number="projectNumber"
       @click-project-navigate="onClickProjectNavigate"
     />
+    <div class="py-8 flex items-center justify-center">
+      <ULink
+        to="/"
+        class="text-accent hover:text-support text-lg transition-all duration-300 underline"
+      >
+        Go To Homepage
+      </ULink>
+    </div>
   </div>
 </template>
 

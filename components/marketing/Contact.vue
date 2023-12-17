@@ -62,7 +62,7 @@
               placeholder="Your message here..."
             />
           </UFormGroup>
-          <ActionButton text="Send Message" @click="submitForm" />
+          <ActionButton text="Send Message" />
         </UForm>
       </ClientOnly>
     </div>
@@ -103,7 +103,5 @@ const submitForm = async (
   if (response.statusCode === 200) {
     return (formSubmitted.value = true);
   }
-
-  // TODO: Error Toast
 };
 </script>
