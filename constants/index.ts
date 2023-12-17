@@ -73,6 +73,7 @@ export const tabData: TabData[] = [
           "I have experience in the following programming languages.",
         items: [
           { name: "JavaScript/TypeScript", level: SkillLevel.Advance },
+          { name: "PHP", level: SkillLevel.Intermediate },
           { name: "Java", level: SkillLevel.Intermediate },
           { name: "Kotlin", level: SkillLevel.Beginner },
           { name: "Python", level: SkillLevel.Beginner },
@@ -87,6 +88,7 @@ export const tabData: TabData[] = [
           { name: "Vue/Nuxt.js", level: SkillLevel.Advance },
           { name: "React/Next.js", level: SkillLevel.Intermediate },
           { name: "React Native", level: SkillLevel.Intermediate },
+          { name: "Laravel", level: SkillLevel.Beginner },
           { name: "Django/Flask", level: SkillLevel.Beginner },
         ],
       },
@@ -105,8 +107,8 @@ export const tabData: TabData[] = [
         title: "Cloud Applications and Hosting Platforms",
         items: [
           { name: "Netlify", level: SkillLevel.Advance },
-          { name: "Heroku", level: SkillLevel.Advance },
           { name: "Vercel", level: SkillLevel.Intermediate },
+          { name: "Heroku", level: SkillLevel.Intermediate },
           { name: "Google Cloud", level: SkillLevel.Intermediate },
         ],
       },
@@ -128,7 +130,6 @@ export const tabData: TabData[] = [
           { name: "Git/GitHub", level: SkillLevel.Advance },
           { name: "REST", level: SkillLevel.Advance },
           { name: "GraphQL", level: SkillLevel.Intermediate },
-          { name: "Cloudinary", level: SkillLevel.Intermediate },
           { name: "Docker", level: SkillLevel.Intermediate },
           { name: "Kubernetes", level: SkillLevel.Beginner },
         ],
@@ -142,7 +143,7 @@ export const tabData: TabData[] = [
       {
         title: "Adobe Creative Cloud",
         description:
-          "I primarily use the Adobe Creative Cloud suite to create and edit visual content for my projects. From designing logos and illustrations to editing photos and videos, I leverage the power of these tools to bring my ideas to life. Below are the proficiencies in the various Adobe applications.",
+          "I primarily use the Adobe Creative Cloud suite to create and edit visual content for my projects. From designing logos and illustrations to editing photos and videos, I leverage the power of these tools to bring my ideas to life.",
         items: [
           { name: "Adobe XD", level: SkillLevel.Advance },
           { name: "Adobe Photoshop", level: SkillLevel.Advance },
