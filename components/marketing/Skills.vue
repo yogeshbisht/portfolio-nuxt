@@ -10,16 +10,16 @@
     />
     <div class="flex flex-col gap-8">
       <p class="md:text-lg sm:text-base text-sm text-accent">
-        In the intricate landscape of technology and design, a rich tapestry of
-        skills forms the cornerstone of my expertise. With a focus on precision,
-        innovation, and strategic vision, I bring a unique blend of
-        proficiencies to the table. As a software engineer, I possess a deep
-        command of diverse programming languages, frameworks, and databases,
-        equipping me to craft solutions that stand at the pinnacle of efficiency
-        and functionality. In the realm of design, I wield the power of
-        aesthetics and user experience to transform ideas into captivating
-        visuals. Below, you&apos;ll find a detailed breakdown of my skill set,
-        showcasing the tools that power my journey in these domains.
+        Tech and design are my playground, and skills are my tools. I&apos;m a
+        software engineer who's all about accuracy, fresh ideas, and seeing the
+        bigger picture. I have a understanding of various programming languages
+        with main focus on NuxtJS/VueJs and NodeJS/NestJS frameworks. I can
+        build systems that work smoothly and do what they're supposed to. Beyond
+        the code, I understand how to make things look good and be easy to use.
+        Basically, I turn ideas into eye-catching, user-friendly creations.
+        Below, you'll find a detailed breakdown of my skill set, showcasing the
+        tools that power my journey in these domains including my experience
+        level with each.
       </p>
       <div class="pt-4">
         <div class="flex flex-row justify-center sm:gap-8 gap-6 mb-8">
