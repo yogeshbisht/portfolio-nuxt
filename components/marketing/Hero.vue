@@ -26,6 +26,27 @@
           <ActionButton link="#professional" text="View Projects" />
           <ActionButton link="#contact" text="Contact" />
         </div>
+        <ClientOnly>
+          <div
+            class="flex items-center md:justify-start justify-center mt-12 sm:gap-8 gap-6 xl:hidden"
+          >
+            <div class="h-[2px] sm:w-12 w-8 bg-white" />
+            <NuxtLink
+              v-for="social in socialLinks"
+              :key="social.name"
+              :to="social.link"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-support transition-all duration-300 cursor-pointer"
+            >
+              <font-awesome-icon
+                :icon="['fab', social.icon]"
+                class="md:text-3xl text-2xl"
+              ></font-awesome-icon>
+            </NuxtLink>
+            <div class="h-[2px] sm:w-12 w-8 bg-white" />
+          </div>
+        </ClientOnly>
       </div>
     </div>
     <NuxtImg
@@ -37,6 +58,7 @@
 
 <script lang="ts" setup>
 import ActionButton from "../ui/ActionButton.vue";
+import { socialLinks } from "~/constants";
 
 const heroIntroduction = [
   "Hello, I am Yogesh Bisht, your guide to the seamless fusion of development and design.",

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header home />
     <SocialBar />
     <Hero />
     <div class="mx-auto" ref="main">

@@ -1,7 +1,7 @@
 <template>
   <SectionContainer
     section-id="testimonials"
-    section-title="What My Clients Say"
+    section-title="Testimonials"
   >
     <ClientOnly>
       <Swiper

@@ -1,28 +1,6 @@
 <template>
   <div>
-    <header
-      id="header"
-      class="page-padding fixed h-[80px] w-screen backdrop-blur-lg bg-transparent shadow-lg z-50"
-      ref="headerRef"
-    >
-      <div
-        class="flex justify-between items-center h-full gap-x-4 container mx-auto"
-      >
-        <NuxtLink
-          to="/"
-          class="md:text-2xl text-xl font-medium capitalize tracking-wide cursor-pointer group transition duration-300"
-        >
-          <ClientOnly
-            ><font-awesome-icon
-              icon="home"
-              size="xs"
-              class="mr-3 transition-all duration-300 ease-in-out"
-            ></font-awesome-icon
-            >YOGESH BISHT</ClientOnly
-          >
-        </NuxtLink>
-      </div>
-    </header>
+    <Header />
     <ProjectHero
       v-if="project"
       :project="project"
@@ -42,6 +20,7 @@
 
 <script lang="ts" setup>
 import ProjectHero from "~/components/project/ProjectHero.vue";
+import Header from "~/components/ui/Header.vue";
 import projects from "~/constants/projects";
 
 const route = useRoute();

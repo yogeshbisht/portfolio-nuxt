@@ -1,5 +1,5 @@
 <template>
-  <SectionContainer section-id="skills" section-title="My Skills">
+  <SectionContainer section-id="skills" section-title="Skills">
     <NuxtImg
       src="/images/skills.png"
       width="1280"

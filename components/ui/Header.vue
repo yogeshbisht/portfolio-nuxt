@@ -7,13 +7,9 @@
     <div
       class="flex justify-between items-center h-full gap-x-4 section-container"
     >
-      <div
-        class="md:text-2xl text-xl font-medium capitalize tracking-wide cursor-pointer"
-        @click="scrollToTop"
-      >
-        YOGESH BISHT
-      </div>
-      <ClientOnly>
+      <Logo :home="home" />
+
+      <ClientOnly v-if="home">
         <div class="block md:hidden">
           <button class="flex items-center" @click="() => setNavbarOpen()">
             <font-awesome-icon
@@ -54,6 +50,7 @@
       </ClientOnly>
     </div>
     <MenuOverlay
+      v-if="home"
       v-show="navbarOpen"
       :links="headerData"
       :on-click="() => setNavbarOpen(false)"
@@ -66,6 +63,7 @@ import gsap from "gsap";
 import { headerData } from "~/constants";
 import MenuOverlay from "./MenuOverlay.vue";
 import useScrollStore from "~/store/scroll";
+import Logo from "./Logo.vue";
 
 const store = useScrollStore();
 
@@ -74,6 +72,10 @@ const headerRef = ref();
 
 let ctx: any;
 let tl: any;
+
+const props = defineProps<{
+  home?: boolean;
+}>();
 
 const updateHeaderBackground = () => {
   if (store.getScrollPosition >= store.getAboutSectionTop) {
@@ -102,13 +104,6 @@ onMounted(() => {
 onUnmounted(() => {
   ctx.revert();
 });
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
 
 const setNavbarOpen = (value?: boolean) => {
   if (value === undefined) {
