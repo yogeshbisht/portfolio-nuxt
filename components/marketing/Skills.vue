@@ -1,7 +1,7 @@
 <template>
   <SectionContainer section-id="skills" section-title="Skills">
     <NuxtImg
-      src="/images/skills.png"
+      src="/images/skills-bg.png"
       width="1280"
       height="720"
       alt="skills"
