@@ -1,7 +1,7 @@
 <template>
   <header
     id="header"
-    class="fixed md:h-20 h-16 w-screen backdrop-blur-lg bg-transparent shadow-lg z-50"
+    class="fixed md:h-24 h-20 w-screen backdrop-blur-lg bg-transparent z-50"
     ref="headerRef"
   >
     <div
