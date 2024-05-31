@@ -86,7 +86,7 @@ export const tabData: TabData[] = [
         items: [
           { name: "Node/Express/Nest.js", level: SkillLevel.Advance },
           { name: "Vue/Nuxt.js", level: SkillLevel.Advance },
-          { name: "React/Next.js", level: SkillLevel.Intermediate },
+          { name: "React/Next.js", level: SkillLevel.Advance },
           { name: "React Native", level: SkillLevel.Intermediate },
           { name: "Laravel", level: SkillLevel.Beginner },
           { name: "Django/Flask", level: SkillLevel.Beginner },
@@ -98,7 +98,7 @@ export const tabData: TabData[] = [
           "I have experience in the following relational and non-relational databases.",
         items: [
           { name: "MongoDB", level: SkillLevel.Advance },
-          { name: "MySQL", level: SkillLevel.Intermediate },
+          { name: "MySQL", level: SkillLevel.Advance },
           { name: "PostgreSQL", level: SkillLevel.Intermediate },
           { name: "Redis", level: SkillLevel.Beginner },
         ],
@@ -107,9 +107,9 @@ export const tabData: TabData[] = [
         title: "Cloud Applications and Hosting Platforms",
         items: [
           { name: "Netlify", level: SkillLevel.Advance },
-          { name: "Vercel", level: SkillLevel.Intermediate },
-          { name: "Heroku", level: SkillLevel.Intermediate },
+          { name: "Vercel", level: SkillLevel.Advance },
           { name: "Google Cloud", level: SkillLevel.Intermediate },
+          { name: "Heroku", level: SkillLevel.Intermediate },
         ],
       },
       {
@@ -146,32 +146,23 @@ export const tabData: TabData[] = [
           "I primarily use the Adobe Creative Cloud suite to create and edit visual content for my projects. From designing logos and illustrations to editing photos and videos, I leverage the power of these tools to bring my ideas to life.",
         items: [
           { name: "Adobe XD", level: SkillLevel.Advance },
-          { name: "Adobe Photoshop", level: SkillLevel.Advance },
-          { name: "Adobe Illustrator", level: SkillLevel.Intermediate },
-          { name: "Adobe Premiere Pro", level: SkillLevel.Intermediate },
-          { name: "Adobe After Effects", level: SkillLevel.Intermediate },
-        ],
-      },
-      {
-        title: "Designing Tools",
-        description:
-          "I also use other designing tools to create visual content for my projects. Below are the proficiencies in the various designing tools.",
-        items: [
-          { name: "Figma", level: SkillLevel.Advance },
-          { name: "Framer", level: SkillLevel.Intermediate },
-          { name: "Sketch", level: SkillLevel.Intermediate },
-          { name: "InVision", level: SkillLevel.Beginner },
+          { name: "Photoshop", level: SkillLevel.Advance },
+          { name: "Illustrator", level: SkillLevel.Intermediate },
+          { name: "Premiere Pro", level: SkillLevel.Intermediate },
+          { name: "After Effects", level: SkillLevel.Intermediate },
+          { name: "Adobe Spark", level: SkillLevel.Intermediate },
         ],
       },
       {
         title: "Other Tools",
         description:
-          "Here are some other similar tools that I use for my projects.",
+          "I also use other designing tools to create visual content for my projects. Below are the proficiencies in the various designing tools.",
         items: [
-          { name: "Canva", level: SkillLevel.Advance },
-          { name: "Crello", level: SkillLevel.Intermediate },
-          { name: "Piktochart", level: SkillLevel.Intermediate },
-          { name: "Adobe Spark", level: SkillLevel.Beginner },
+          { name: "Figma", level: SkillLevel.Advance },
+          { name: "Canva", level: SkillLevel.Intermediate },
+          { name: "Framer", level: SkillLevel.Intermediate },
+          { name: "Sketch", level: SkillLevel.Intermediate },
+          { name: "InVision", level: SkillLevel.Beginner },
         ],
       },
     ],

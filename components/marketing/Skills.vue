@@ -10,19 +10,17 @@
     />
     <div class="flex flex-col gap-8">
       <p class="md:text-lg sm:text-base text-sm text-accent">
-        Tech and design are my playground, and skills are my tools. I&apos;m a
-        software engineer who's all about accuracy, fresh ideas, and seeing the
-        bigger picture. I have a understanding of various programming languages
-        with main focus on NuxtJS/VueJs and NodeJS/NestJS frameworks. I can
-        build systems that work smoothly and do what they're supposed to. Beyond
-        the code, I understand how to make things look good and be easy to use.
-        Basically, I turn ideas into eye-catching, user-friendly creations.
-        Below, you'll find a detailed breakdown of my skill set, showcasing the
-        tools that power my journey in these domains including my experience
-        level with each.
+        I&apos;m a software engineer who's all about accuracy, fresh ideas, and
+        seeing the bigger picture. I have a understanding of various programming
+        languages with main focus on NuxtJS/NextJS and NodeJS/NestJS frameworks.
+        I can build systems that work smoothly and do what they're supposed to.
+        Beyond the code, I understand how to make things look good and be easy
+        to use. Basically, I turn ideas into eye-catching, user-friendly
+        creations. Below, you'll find a detailed breakdown of my skill set,
+        including my experience level with each.
       </p>
       <div class="pt-4">
-        <div class="flex flex-row justify-center sm:gap-8 gap-6 mb-8">
+        <div class="flex flex-row sm:gap-8 gap-6 mb-8">
           <button
             v-for="tab in tabData"
             :key="tab.id"
@@ -30,10 +28,10 @@
           >
             <p
               :class="[
-                'text-[12px] hover:text-accent hover:border-accent md:text-lg xs:text-base transition duration-300 border-b-2 py-2 px-4 rounded-xl',
+                'text-[12px] hover:text-blue-400 hover:border-blue-400 md:text-lg xs:text-base transition duration-300 py-2 px-4 rounded-xl',
                 selectedTab === tab.id
-                  ? 'text-accent border-accent'
-                  : 'text-slate-600 border-slate-600',
+                  ? 'text-blue-400 border-blue-400 font-normal border-b-2'
+                  : 'text-accent/80 border-accent/80 font-light border-b',
               ]"
             >
               {{ tab.title }}
