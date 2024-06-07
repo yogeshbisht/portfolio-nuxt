@@ -2,6 +2,53 @@ import type { ProjectsData } from "~/types";
 
 const projects: ProjectsData[] = [
   {
+    id: "zentaflowplan",
+    title: "Cash Flow Manager (Staging)",
+    brand: "Zentapon Pty. Ltd.",
+    type: "professional",
+    tech: ["Next.js", "Nest.js"],
+    intro: [
+      "The application focuses on managing cashflow for present and future based on your current entries.",
+      "Consists of utilities like drag/drop, Bank-Feed API Integration, dynamic data tables, currency conversions and more.",
+      "Currently in staging phase and will be live soon.",
+    ],
+    features: [
+      {
+        id: "feature1",
+        name: "Interactive Charts & Dynamic Tables",
+        image: true,
+        description: [
+          "Usage of interactive line and bar charts",
+          "Use of dynamic, sortable and expandable tables",
+          "Import/Export transactions from any data file to custom output file",
+        ],
+      },
+      {
+        id: "feature2",
+        name: "Open Bank API Integration",
+        image: true,
+        description: [
+          "The website is integrated with Plaid API for users to get benefits from their own bank accounts",
+          "A user is able to create multiple scenarios to mock up real bank like feature and estimated future earnings",
+          "Transactions for real bank accounts can be copied to a scenario and user can see the future cashflow based on that",
+        ],
+      },
+      {
+        id: "feature3",
+        name: "Real Time Currency Conversion",
+        image: true,
+        description: [
+          "Real time currency conversion based on the latest exchange rates",
+          "User can add transactions in different currencies based on scenarios and see the total amount in the base currency",
+        ],
+      },
+    ],
+    imgUrl: "zentaflowplan.png",
+    mockupImg: "zentaflowplan.png",
+    webUrl: "https://cashflow-clone.vercel.app",
+    appUrl: "https://zentapon.com.au",
+  },
+  {
     id: "devtrovex",
     title: "Stack Overflow Concept",
     type: "personal",
@@ -122,7 +169,7 @@ const projects: ProjectsData[] = [
   },
   {
     id: "zentapon",
-    title: "Cash Flow Manager",
+    title: "Zenta Flow Plan",
     brand: "Zentapon Pty. Ltd.",
     type: "professional",
     tech: ["React.js", "Node.js", "React Native"],
@@ -152,7 +199,7 @@ const projects: ProjectsData[] = [
         ],
       },
     ],
-    imgUrl: "zentapon.jpg",
+    imgUrl: "zentapon.png",
     mockupImg: "zentapon.png",
     webUrl: "https://zentaflowplan.com",
     appUrl: "https://zentapon.com.au",
