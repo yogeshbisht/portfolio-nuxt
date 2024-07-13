@@ -88,15 +88,14 @@ const formState = reactive({
 const submitForm = async (
   event: FormSubmitEvent<z.output<typeof ContactSchema>>
 ) => {
-  event.preventDefault();
-
+  const { name, email, subject, message } = event.data;
   const response = await $fetch("/api/contact", {
     method: "POST",
     body: JSON.stringify({
-      name: formState.name,
-      email: formState.email,
-      subject: formState.subject,
-      message: formState.message,
+      name,
+      email,
+      subject,
+      message,
     }),
   });
 
