@@ -46,7 +46,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "Upwork",
-    icon: "upwork",
+    icon: "square-upwork",
     link: "https://www.upwork.com/freelancers/yogeshbishtdev",
   },
   {

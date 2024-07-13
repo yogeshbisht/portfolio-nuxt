@@ -14,14 +14,9 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image", "nuxt-swiper", "@pinia/nuxt", "@nuxt/ui"],
+  image: { provider: "netlify" },
 
-  image: {
-    provider: "netlify",
-    netlify: {
-      baseURL: process.env.HOME_URL,
-    },
-  },
+  modules: ["@nuxt/image", "nuxt-swiper", "@pinia/nuxt", "@nuxt/ui"],
 
   compatibilityDate: "2024-07-13",
 });
