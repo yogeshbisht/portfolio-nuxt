@@ -62,7 +62,7 @@
               placeholder="Your message here..."
             />
           </UFormGroup>
-          <ActionButton text="Send Message" />
+          <ActionButton text="Send Message" :disabled="isSubmitting" />
         </UForm>
       </ClientOnly>
     </div>
@@ -77,6 +77,7 @@ import { ContactSchema } from "~/schemas/contact";
 import type { FormSubmitEvent } from "@nuxt/ui/dist/runtime/types";
 
 const formSubmitted = ref(false);
+const isSubmitting = ref(false);
 
 const formState = reactive({
   name: "",
@@ -89,6 +90,9 @@ const submitForm = async (
   event: FormSubmitEvent<z.output<typeof ContactSchema>>
 ) => {
   const { name, email, subject, message } = event.data;
+
+  isSubmitting.value = true;
+
   const response = await $fetch("/api/contact", {
     method: "POST",
     body: JSON.stringify({
@@ -102,5 +106,6 @@ const submitForm = async (
   if (response.statusCode === 200) {
     return (formSubmitted.value = true);
   }
+  isSubmitting.value = false;
 };
 </script>

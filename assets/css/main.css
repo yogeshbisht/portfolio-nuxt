@@ -82,4 +82,8 @@ body {
   .project-icon {
     @apply text-accent transition-all duration-300 ease-in-out;
   }
+
+  .disable-element {
+    @apply pointer-events-none select-none opacity-70;
+  }
 }
