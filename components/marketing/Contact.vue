@@ -71,10 +71,10 @@
 
 <script lang="ts" setup>
 import { z } from "zod";
+import type { FormSubmitEvent } from "#ui/types";
+import { ContactSchema } from "~/schemas/contact";
 import SectionContainer from "../ui/SectionContainer.vue";
 import ActionButton from "../ui/ActionButton.vue";
-import { ContactSchema } from "~/schemas/contact";
-import type { FormSubmitEvent } from "@nuxt/ui/dist/runtime/types";
 
 const formSubmitted = ref(false);
 const isSubmitting = ref(false);
