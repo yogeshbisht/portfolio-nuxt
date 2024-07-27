@@ -2,6 +2,21 @@ import type { ProjectsData } from "~/types";
 
 const projects: ProjectsData[] = [
   {
+    id: "docurealm",
+    title: "Collaborative Document Editor",
+    type: "personal",
+    tech: ["Next.js"],
+    intro: [
+      "This is a collaborative document editor built with NextJS.",
+      "Includes authentication and is fully responsive.",
+      "Users can create, edit and delete documents.",
+      "Users can also collaborate with other users in real time.",
+    ],
+    imgUrl: "docurealm.png",
+    mockupImg: "docurealm.png",
+    webUrl: "https://docurealm.vercel.app/",
+  },
+  {
     id: "zentaflowplan",
     title: "Cash Flow Manager (Staging)",
     brand: "Zentapon Pty. Ltd.",
