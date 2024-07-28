@@ -112,11 +112,14 @@ const projects: ProjectsData[] = [
     id: "portfolio",
     title: "Portfolio Website",
     type: "personal",
-    tech: ["React.js"],
-    intro: ["Portfolio website including some standard animations."],
+    tech: ["React.js", "Framer"],
+    intro: [
+      "Portfolio website including some standard animations.",
+      "The animations are created using Framer Motion.",
+    ],
     imgUrl: "ybnew.png",
     mockupImg: "ybnew.png",
-    webUrl: "https://ybnew.netlify.com/",
+    webUrl: "https://ybnew.netlify.app/",
   },
   {
     id: "homewayz",
