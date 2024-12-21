@@ -10,28 +10,28 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.4.2",
-    "@nuxt/image": "^1.8.0",
-    "@types/nodemailer": "^6.4.16",
+    "@nuxt/devtools": "^1.6.4",
+    "@nuxt/image": "^1.8.1",
+    "@types/nodemailer": "^6.4.17",
     "autoprefixer": "^10.4.20",
-    "nuxt": "^3.13.2",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.12",
-    "vue": "^3.5.6",
-    "vue-router": "^4.4.5"
+    "nuxt": "^3.14.1592",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.6.0",
-    "@fortawesome/free-brands-svg-icons": "^6.6.0",
-    "@fortawesome/free-regular-svg-icons": "^6.6.0",
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
-    "@nuxt/ui": "^2.18.5",
-    "@pinia/nuxt": "^0.5.4",
+    "@nuxt/ui": "^2.20.0",
+    "@pinia/nuxt": "^0.9.0",
     "gsap": "^3.12.5",
-    "nodemailer": "^6.9.15",
-    "nuxt-swiper": "^1.2.2",
-    "pinia": "^2.2.2",
-    "zod": "^3.23.8"
+    "nodemailer": "^6.9.16",
+    "nuxt-swiper": "^2.0.0",
+    "pinia": "^2.3.0",
+    "zod": "^3.24.1"
   }
 }
