@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #b0bed1;
+  --color-brand: #0ea5e9;
+  --color-support: #93c5fd;
+  --breakpoint-xs: 475px;
+}
 
 html {
   scroll-behavior: smooth;

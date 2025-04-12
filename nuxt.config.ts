@@ -1,22 +1,18 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
   css: [
     "~/assets/css/main.css",
-    "@fortawesome/fontawesome-svg-core/styles.css",
+    "@fortawesome/fontawesome-svg-core/styles.css"
   ],
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  vite: {
+    plugins: [tailwindcss()]
   },
-
-  image: { provider: "netlify" },
 
   modules: ["@nuxt/image", "nuxt-swiper", "@pinia/nuxt", "@nuxt/ui"],
 
-  compatibilityDate: "2024-07-13",
+  compatibilityDate: "2024-11-01"
 });
