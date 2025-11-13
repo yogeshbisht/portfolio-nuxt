@@ -31,5 +31,5 @@
 </template>
 
 <script lang="ts" setup>
-import { socialLinks } from "~/constants";
+import { socialLinks } from "~/app/constants";
 </script>

@@ -45,7 +45,7 @@
 </template>
 
 <script lang="ts" setup>
-import useScrollStore from "~/store/scroll";
+import useScrollStore from "~/app/store/scroll";
 import SectionTitle from "~/components/ui/SectionTitle.vue";
 
 const store = useScrollStore();

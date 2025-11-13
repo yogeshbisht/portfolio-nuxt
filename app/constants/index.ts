@@ -1,70 +1,70 @@
-import type { HeaderData, SocialLink, TabData } from "~/types";
+import type { HeaderData, SocialLink, TabData } from "~/app/types";
 
 export const headerData: HeaderData[] = [
   {
     id: "about",
     name: "About Me",
-    icon: "user"
+    icon: "user",
   },
   {
     id: "skills",
     name: "Skills",
-    icon: "graduation-cap"
+    icon: "graduation-cap",
   },
   {
     id: "professional",
     name: "Professional Projects",
-    icon: "code"
+    icon: "code",
   },
   {
     id: "personal",
     name: "Personal Projects",
-    icon: "book"
+    icon: "book",
   },
   {
     id: "testimonials",
     name: "Testimonials",
-    icon: "comment-dots"
+    icon: "comment-dots",
   },
   {
     id: "contact",
     name: "Contact",
-    icon: "envelope"
-  }
+    icon: "envelope",
+  },
 ];
 
 export const socialLinks: SocialLink[] = [
   {
     name: "Github",
     icon: "github",
-    link: "https://github.com/yogeshbisht"
+    link: "https://github.com/yogeshbisht",
   },
   {
     name: "Upwork",
     icon: "square-upwork",
-    link: "https://www.upwork.com/freelancers/yogeshbishtdev"
+    link: "https://www.upwork.com/freelancers/yogeshbishtdev",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://linkedin.com/in/yogesh-bisht-5871191b8"
+    link: "https://linkedin.com/in/yogesh-bisht-5871191b8",
   },
   {
     name: "X",
     icon: "square-x-twitter",
-    link: "https://twitter.com/yogeshbisht"
+    link: "https://twitter.com/yogeshbisht",
   },
   {
     name: "Facebook",
     icon: "facebook",
-    link: "https://www.facebook.com/yogesh.bisht.925"
-  }
+    link: "https://www.facebook.com/yogesh.bisht.925",
+  },
 ];
 
 export enum SkillLevel {
   Beginner = "Beginner",
   Intermediate = "Intermediate",
-  Advance = "Advance"
+  Advance = "Advance",
 }
 
 export const tabData: TabData[] = [
@@ -82,8 +82,8 @@ export const tabData: TabData[] = [
           { name: "PHP", level: SkillLevel.Intermediate },
           { name: "Kotlin", level: SkillLevel.Intermediate },
           { name: "Java", level: SkillLevel.Beginner },
-          { name: "Python", level: SkillLevel.Beginner }
-        ]
+          { name: "Python", level: SkillLevel.Beginner },
+        ],
       },
       {
         title: "Frameworks (Full Stack)",
@@ -95,8 +95,8 @@ export const tabData: TabData[] = [
           { name: "React/Next.js", level: SkillLevel.Advance },
           { name: "React Native", level: SkillLevel.Intermediate },
           { name: "Laravel", level: SkillLevel.Beginner },
-          { name: "Django/Flask", level: SkillLevel.Beginner }
-        ]
+          { name: "Django/Flask", level: SkillLevel.Beginner },
+        ],
       },
       {
         title: "Databases",
@@ -108,8 +108,8 @@ export const tabData: TabData[] = [
           { name: "PostgreSQL", level: SkillLevel.Advance },
           { name: "Supabase", level: SkillLevel.Intermediate },
           { name: "Neon", level: SkillLevel.Intermediate },
-          { name: "Redis", level: SkillLevel.Beginner }
-        ]
+          { name: "Redis", level: SkillLevel.Beginner },
+        ],
       },
       {
         title: "Cloud and Hosting",
@@ -117,8 +117,8 @@ export const tabData: TabData[] = [
           { name: "Netlify", level: SkillLevel.Advance },
           { name: "Vercel", level: SkillLevel.Advance },
           { name: "Google Cloud", level: SkillLevel.Intermediate },
-          { name: "Heroku", level: SkillLevel.Intermediate }
-        ]
+          { name: "Heroku", level: SkillLevel.Intermediate },
+        ],
       },
       {
         title: "Amazon Web Services",
@@ -130,8 +130,8 @@ export const tabData: TabData[] = [
           { name: "Route 53", level: SkillLevel.Advance },
           { name: "CloudFront", level: SkillLevel.Intermediate },
           { name: "DynamoDB", level: SkillLevel.Intermediate },
-          { name: "Lambda", level: SkillLevel.Beginner }
-        ]
+          { name: "Lambda", level: SkillLevel.Beginner },
+        ],
       },
       {
         title: "Other Services",
@@ -141,10 +141,10 @@ export const tabData: TabData[] = [
           { name: "Payload CMS", level: SkillLevel.Intermediate },
           { name: "Docker", level: SkillLevel.Intermediate },
           { name: "Kubernetes", level: SkillLevel.Beginner },
-          { name: "GraphQL", level: SkillLevel.Beginner }
-        ]
-      }
-    ]
+          { name: "GraphQL", level: SkillLevel.Beginner },
+        ],
+      },
+    ],
   },
   {
     title: "Project Management",
@@ -156,16 +156,16 @@ export const tabData: TabData[] = [
           "I have experience in using Agile methodologies to manage projects effectively. I've worked with both Scrum and Kanban methodologies, and I'm comfortable with the iterative and collaborative approach they offer.",
         items: [
           { name: "Kanban", level: SkillLevel.Advance },
-          { name: "Scrum", level: SkillLevel.Intermediate }
-        ]
+          { name: "Scrum", level: SkillLevel.Intermediate },
+        ],
       },
       {
         title: "CI/CD Pipelines",
         description:
           "I have experience in setting up and managing CI/CD pipelines to automate the build, test, and deployment process of my projects.",
-        items: [{ name: "Jenkins", level: SkillLevel.Intermediate }]
-      }
-    ]
+        items: [{ name: "Jenkins", level: SkillLevel.Intermediate }],
+      },
+    ],
   },
   {
     title: "Graphic Design",
@@ -181,8 +181,8 @@ export const tabData: TabData[] = [
           { name: "Illustrator", level: SkillLevel.Intermediate },
           { name: "Premiere Pro", level: SkillLevel.Intermediate },
           { name: "After Effects", level: SkillLevel.Intermediate },
-          { name: "Adobe Spark", level: SkillLevel.Intermediate }
-        ]
+          { name: "Adobe Spark", level: SkillLevel.Intermediate },
+        ],
       },
       {
         title: "Other Tools",
@@ -193,9 +193,9 @@ export const tabData: TabData[] = [
           { name: "Canva", level: SkillLevel.Intermediate },
           { name: "Motion", level: SkillLevel.Intermediate },
           { name: "Sketch", level: SkillLevel.Beginner },
-          { name: "InVision", level: SkillLevel.Beginner }
-        ]
-      }
-    ]
-  }
+          { name: "InVision", level: SkillLevel.Beginner },
+        ],
+      },
+    ],
+  },
 ];

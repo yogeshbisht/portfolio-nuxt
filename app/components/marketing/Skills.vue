@@ -88,8 +88,8 @@
 
 <script lang="ts" setup>
 import SectionContainer from "../ui/SectionContainer.vue";
-import type { ExperienceLevel } from "~/types";
-import { SkillLevel, tabData } from "~/constants";
+import type { ExperienceLevel } from "~/app/types";
+import { SkillLevel, tabData } from "~/app/constants";
 
 const experienceLevels: ExperienceLevel[] = [
   { name: SkillLevel.Advance, color: "bg-brand" },

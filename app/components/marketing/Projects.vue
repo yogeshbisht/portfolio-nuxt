@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import SectionContainer from "~/components/ui/SectionContainer.vue";
 import ProjectCard from "~/components/project/ProjectCard.vue";
-import projects from "~/constants/projects";
+import projects from "~/app/constants/projects";
 
 const props = defineProps({
   type: {

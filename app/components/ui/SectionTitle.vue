@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { headerData } from "~/constants";
+import { headerData } from "~/app/constants";
 
 type SectionTitleProps = {
   sectionId?: string;

@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import type { HeaderData } from "~/types";
+import type { HeaderData } from "~/app/types";
 
 export default defineComponent({
   props: {
