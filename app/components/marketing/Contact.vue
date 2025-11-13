@@ -72,7 +72,7 @@
 <script lang="ts" setup>
 import { z } from "zod";
 import type { FormSubmitEvent } from "#ui/types";
-import { ContactSchema } from "~/app/schemas/contact";
+import { ContactSchema } from "~/schemas/contact";
 import SectionContainer from "../ui/SectionContainer.vue";
 import ActionButton from "../ui/ActionButton.vue";
 import { ref, reactive } from "vue";

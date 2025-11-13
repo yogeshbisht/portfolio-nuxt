@@ -57,8 +57,8 @@
 </template>
 
 <script lang="ts" setup>
-import ActionButton from "../ui/ActionButton.vue";
-import { socialLinks } from "~/app/constants";
+import ActionButton from "~/components/ui/ActionButton.vue";
+import { socialLinks } from "~/constants";
 
 const heroIntroduction = [
   "Hello, I am Yogesh Bisht, your guide to the seamless fusion of development and design.",

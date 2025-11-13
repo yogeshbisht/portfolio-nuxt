@@ -11,9 +11,9 @@
 </template>
 
 <script lang="ts" setup>
-import SectionContainer from "../ui/SectionContainer.vue";
-import ProjectCard from "../project/ProjectCard.vue";
-import projects from "~/app/constants/projects";
+import SectionContainer from "~/components/ui/SectionContainer.vue";
+import ProjectCard from "~/components/project/ProjectCard.vue";
+import projects from "~/constants/projects";
 import { computed } from "vue";
 
 const props = defineProps({

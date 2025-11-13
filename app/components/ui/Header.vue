@@ -60,9 +60,9 @@
 
 <script lang="ts" setup>
 import gsap from "gsap";
-import { headerData } from "~/app/constants";
+import { headerData } from "~/constants";
 import MenuOverlay from "./MenuOverlay.vue";
-import useScrollStore from "~/app/store/scroll";
+import useScrollStore from "~/store/scroll";
 import Logo from "./Logo.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 

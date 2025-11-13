@@ -19,9 +19,9 @@
 </template>
 
 <script lang="ts" setup>
-import ProjectHero from "~/app/components/project/ProjectHero.vue";
-import Header from "~/app/components/ui/Header.vue";
-import projects from "~/app/constants/projects";
+import ProjectHero from "~/components/project/ProjectHero.vue";
+import Header from "~/components/ui/Header.vue";
+import projects from "~/constants/projects";
 import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();

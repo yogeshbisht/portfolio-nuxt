@@ -57,7 +57,7 @@
 <script lang="ts" setup>
 import gsap from "gsap";
 import { onMounted, onUnmounted, ref } from "vue";
-import type { ProjectsData } from "~/app/types";
+import type { ProjectsData } from "~/types";
 
 defineProps<{ project: ProjectsData }>();
 

@@ -6,5 +6,5 @@
 </template>
 
 <script lang="ts" setup>
-import Footer from "~/app/components/ui/Footer.vue";
+import Footer from "~/components/ui/Footer.vue";
 </script>

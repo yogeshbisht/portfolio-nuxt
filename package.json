@@ -12,7 +12,7 @@
   "devDependencies": {
     "@nuxt/devtools": "^2.3.2",
     "@nuxt/image": "^1.10.0",
-    "@pinia/nuxt": "^0.11.0",
+    "@pinia/nuxt": "^0.11.3",
     "@types/nodemailer": "^6.4.17",
     "vue": "^3.5.24",
     "vue-router": "^4.6.3"
@@ -26,11 +26,11 @@
     "@nuxt/ui": "^3.0.2",
     "@tailwindcss/vite": "^4.1.17",
     "gsap": "^3.13.0",
-    "nodemailer": "^6.10.0",
+    "nodemailer": "^7.0.10",
     "nuxt": "^4.2.1",
     "nuxt-swiper": "^2.0.1",
     "pinia": "^3.0.4",
     "tailwindcss": "^4.1.17",
-    "zod": "^3.24.2"
+    "zod": "^3.25.76"
   }
 }

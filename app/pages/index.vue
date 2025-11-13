@@ -25,7 +25,7 @@ import Skills from "~/components/marketing/Skills.vue";
 import Projects from "~/components/marketing/Projects.vue";
 import Testimonials from "~/components/marketing/Testimonials.vue";
 import Contact from "~/components/marketing/Contact.vue";
-import { headerData } from "~/app/constants";
+import { headerData } from "~/constants";
 
 const main = ref();
 let ctx;

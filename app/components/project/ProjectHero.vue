@@ -104,7 +104,7 @@
 
 <script lang="ts" setup>
 import Spinner from "../ui/Spinner.vue";
-import type { ProjectsData } from "~/app/types";
+import type { ProjectsData } from "~/types";
 import { ref, type PropType } from "vue";
 
 const isImageLoading = ref(true);

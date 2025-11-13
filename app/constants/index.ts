@@ -1,4 +1,4 @@
-import type { HeaderData, SocialLink, TabData } from "~/app/types";
+import type { HeaderData, SocialLink, TabData } from "~/types";
 
 export const headerData: HeaderData[] = [
   {
