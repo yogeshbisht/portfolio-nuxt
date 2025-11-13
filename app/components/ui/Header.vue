@@ -64,6 +64,7 @@ import { headerData } from "~/app/constants";
 import MenuOverlay from "./MenuOverlay.vue";
 import useScrollStore from "~/app/store/scroll";
 import Logo from "./Logo.vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const store = useScrollStore();
 

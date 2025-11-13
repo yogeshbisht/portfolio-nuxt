@@ -13,6 +13,9 @@
 </template>
 
 <script lang="ts" setup>
+import { defineProps } from "vue";
+import { useRouter } from "vue-router";
+
 const router = useRouter();
 
 const props = defineProps<{

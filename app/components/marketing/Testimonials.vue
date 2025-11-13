@@ -1,11 +1,8 @@
 <template>
-  <SectionContainer
-    section-id="testimonials"
-    section-title="Testimonials"
-  >
+  <SectionContainer section-id="testimonials" section-title="Testimonials">
     <ClientOnly>
       <Swiper
-        :modules="[SwiperNavigation]"
+        :modules="[Navigation]"
         :slides-per-view="1"
         class="relative"
         :navigation="{
@@ -42,6 +39,7 @@
 
 <script lang="ts" setup>
 import SectionContainer from "../ui/SectionContainer.vue";
+import { Navigation } from "swiper/modules";
 
 type Testimonial = {
   id: string;

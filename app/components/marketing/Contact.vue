@@ -72,9 +72,10 @@
 <script lang="ts" setup>
 import { z } from "zod";
 import type { FormSubmitEvent } from "#ui/types";
-import { ContactSchema } from "~/schemas/contact";
+import { ContactSchema } from "~/app/schemas/contact";
 import SectionContainer from "../ui/SectionContainer.vue";
 import ActionButton from "../ui/ActionButton.vue";
+import { ref, reactive } from "vue";
 
 const formSubmitted = ref(false);
 const isSubmitting = ref(false);
@@ -103,7 +104,7 @@ const submitForm = async (
     }),
   });
 
-  if (response.statusCode === 200) {
+  if ((response as { statusCode: number }).statusCode === 200) {
     return (formSubmitted.value = true);
   }
   isSubmitting.value = false;
