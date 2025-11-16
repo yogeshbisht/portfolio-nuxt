@@ -4,4 +4,4 @@
 
 ### Are there any environment variables that need to be added?
 
-<!-- List of variables if there are any, or just mention nothing is needed -->
+<!-- List of variables if there are any, or mention nothing is needed -->
