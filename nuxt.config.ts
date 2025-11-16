@@ -13,7 +13,12 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
-  modules: ["@nuxt/image", "nuxt-swiper", "@pinia/nuxt", "@nuxt/ui"],
+  modules: [
+    "@nuxt/image",
+    "@pinia/nuxt",
+    "@nuxt/ui",
+    "nuxt-swiper",
+  ],
 
   compatibilityDate: "2024-11-01",
 });

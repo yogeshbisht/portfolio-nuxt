@@ -27,41 +27,45 @@
           v-else
           :schema="ContactSchema"
           :state="formState"
-          class="flex flex-col flex-1"
+          class="flex flex-col flex-1 gap-6"
           @submit="submitForm"
         >
-          <UFormGroup label="Your Name" name="name" class="mb-6">
+          <UFormField label="Your Name" name="name">
             <UInput
               type="text"
               v-model="formState.name"
-              input-class="bg-slate-800 border placeholder-slate-600 p-3 focus:border-support focus:outline-none focus:ring-1 focus:ring-support rounded-lg"
+              class="w-full"
               placeholder="Enter your name"
+              size="xl"
             />
-          </UFormGroup>
-          <UFormGroup label="Your Email" name="email" class="mb-6">
+          </UFormField>
+          <UFormField label="Your Email" name="email">
             <UInput
               type="text"
               v-model="formState.email"
-              input-class="bg-slate-800 border placeholder-slate-600 p-3 focus:border-support focus:outline-none focus:ring-1 focus:ring-support rounded-lg"
+              class="w-full"
               placeholder="Enter your email id here"
+              size="xl"
             />
-          </UFormGroup>
-          <UFormGroup label="Subject" name="subject" class="mb-6">
+          </UFormField>
+          <UFormField label="Subject" name="subject">
             <UInput
               type="text"
               v-model="formState.subject"
-              input-class="bg-slate-800 border placeholder-slate-600 p-3 focus:border-support focus:outline-none focus:ring-1 focus:ring-support rounded-lg"
+              class="w-full"
               placeholder="I have a question about..."
+              size="xl"
             />
-          </UFormGroup>
-          <UFormGroup label="Message" name="message" class="mb-10">
+          </UFormField>
+          <UFormField label="Message" name="message" class="mb-4">
             <UTextarea
               v-model="formState.message"
-              :rows="5"
-              textarea-class="bg-slate-800 border placeholder-slate-600 p-3 focus:border-support focus:outline-none focus:ring-1 focus:ring-support rounded-lg"
+              :rows="6"
+              class="w-full"
               placeholder="Your message here..."
+              size="xl"
             />
-          </UFormGroup>
+          </UFormField>
           <ActionButton text="Send Message" :disabled="isSubmitting" />
         </UForm>
       </ClientOnly>
@@ -70,26 +74,23 @@
 </template>
 
 <script lang="ts" setup>
-import { z } from "zod";
-import type { FormSubmitEvent } from "#ui/types";
-import { ContactSchema } from "~/schemas/contact";
-import SectionContainer from "../ui/SectionContainer.vue";
-import ActionButton from "../ui/ActionButton.vue";
+import type { FormSubmitEvent } from "@nuxt/ui";
+import { ContactSchema, type ContactSchemaType } from "~/schemas/contact";
+import SectionContainer from "~/components/ui/SectionContainer.vue";
+import ActionButton from "~/components/ui/ActionButton.vue";
 import { ref, reactive } from "vue";
 
 const formSubmitted = ref(false);
 const isSubmitting = ref(false);
 
-const formState = reactive({
+const formState = reactive<Partial<ContactSchemaType>>({
   name: "",
   email: "",
   subject: "",
   message: "",
 });
 
-const submitForm = async (
-  event: FormSubmitEvent<z.output<typeof ContactSchema>>
-) => {
+const submitForm = async (event: FormSubmitEvent<ContactSchemaType>) => {
   const { name, email, subject, message } = event.data;
 
   isSubmitting.value = true;
@@ -105,7 +106,7 @@ const submitForm = async (
   });
 
   if ((response as { statusCode: number }).statusCode === 200) {
-    return (formSubmitted.value = true);
+    formSubmitted.value = true;
   }
   isSubmitting.value = false;
 };
