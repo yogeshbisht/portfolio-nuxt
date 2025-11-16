@@ -1,6 +1,6 @@
 <template>
   <div class="relative" @mouseover="showOverlay" @mouseleave="hideOverlay">
-    <div class="relative bg-slate-800 lg:min-h-[520px] xl:min-h-[480px] z-10">
+    <div class="relative lg:min-h-[520px] xl:min-h-[480px] z-10">
       <div class="relative overflow-hidden">
         <NuxtImg
           :src="`/images/projects/${project.imgUrl}`"
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div
-      class="absolute top-1/4 -bottom-2 -left-2 -right-2 border-2 border-t-0 border-accent rounded-xl"
+      class="absolute top-1/4 -bottom-2 -left-2 -right-2 border-2 border-t-0 border-accent rounded-xl bg-slate-800"
     />
   </div>
 </template>
@@ -57,9 +57,9 @@
 <script lang="ts" setup>
 import gsap from "gsap";
 import { onMounted, onUnmounted, ref } from "vue";
-import type { ProjectsData } from "~/types";
+import type { Project } from "~/types";
 
-defineProps<{ project: ProjectsData }>();
+defineProps<{ project: Project }>();
 
 const imageOverlay = ref();
 let ctx: any;

@@ -5,7 +5,7 @@ type FeatureData = {
   image?: boolean;
 };
 
-export type ProjectsData = {
+export type Project = {
   id: string;
   title: string;
   brand?: string;
@@ -19,6 +19,7 @@ export type ProjectsData = {
   webUrl: string;
   siteDown?: boolean;
   mockupImg?: string;
+  display?: boolean;
 };
 
 export type HeaderData = {

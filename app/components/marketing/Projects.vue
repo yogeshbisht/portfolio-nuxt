@@ -13,8 +13,9 @@
 <script lang="ts" setup>
 import SectionContainer from "~/components/ui/SectionContainer.vue";
 import ProjectCard from "~/components/project/ProjectCard.vue";
-import projects from "~/constants/projects";
+import PROJECTS from "~/constants/projects";
 import { computed } from "vue";
+import type { Project } from "~/types";
 
 const props = defineProps({
   type: {
@@ -24,6 +25,6 @@ const props = defineProps({
 });
 
 const filteredProjects = computed(() => {
-  return projects.filter((project) => project.type === props.type);
+  return PROJECTS.filter((project: Project) => project.type === props.type);
 });
 </script>

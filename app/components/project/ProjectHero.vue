@@ -7,7 +7,7 @@
     <ClientOnly>
       <div
         class="fixed left-[2%] top-[30%] w-10 h-10 md:w-12 md:h-12 flex justify-center items-center group cursor-pointer"
-        @click="onClickProjectNavigate(projectNumber, 'prev')"
+        @click="onClickProjectNavigate(projectIndex, 'prev')"
       >
         <font-awesome-icon
           icon="chevron-left"
@@ -16,7 +16,7 @@
       </div>
       <div
         class="fixed right-[2%] top-[30%] w-10 h-10 md:w-12 md:h-12 flex justify-center items-center group cursor-pointer"
-        @click="onClickProjectNavigate(projectNumber, 'next')"
+        @click="onClickProjectNavigate(projectIndex, 'next')"
       >
         <font-awesome-icon
           icon="chevron-right"
@@ -104,17 +104,17 @@
 
 <script lang="ts" setup>
 import Spinner from "../ui/Spinner.vue";
-import type { ProjectsData } from "~/types";
+import type { Project } from "~/types";
 import { ref, type PropType } from "vue";
 
 const isImageLoading = ref(true);
 
 defineProps({
   project: {
-    type: Object as PropType<ProjectsData>,
+    type: Object as PropType<Project>,
     required: true,
   },
-  projectNumber: {
+  projectIndex: {
     type: Number,
     required: true,
   },
