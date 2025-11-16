@@ -1,19 +1,12 @@
 <template>
-  <SectionContainer
-    section-id="testimonials"
-    section-title="Testimonials"
-  >
+  <SectionContainer section-id="testimonials" section-title="Testimonials">
     <ClientOnly>
-      <Swiper
-        :modules="[SwiperNavigation]"
+      <swiper-container
+        ref="containerRef"
         :slides-per-view="1"
         class="relative"
-        :navigation="{
-          nextEl: '#button-next',
-          prevEl: '#button-prev',
-        }"
       >
-        <SwiperSlide v-for="testimonial in testimonials" :key="testimonial.id">
+        <swiper-slide v-for="testimonial in testimonials" :key="testimonial.id">
           <div class="flex items-center justify-center h-full">
             <div
               class="flex flex-col justify-center max-w-[960px] xs:px-16 p-12"
@@ -28,20 +21,31 @@
               </p>
             </div>
           </div>
-        </SwiperSlide>
-        <div id="button-prev" className="swiper-navigation left-2 sm:left-4">
-          <font-awesome-icon icon="chevron-left" />
-        </div>
-        <div id="button-next" className="swiper-navigation right-2 sm:right-4">
-          <font-awesome-icon icon="chevron-right" />
-        </div>
-      </Swiper>
+        </swiper-slide>
+      </swiper-container>
     </ClientOnly>
+    <div
+      @click="swiper.prev()"
+      class="absolute cursor-pointer left-2 top-1/2 transform -translate-y-1/2 sm:left-4 z-20"
+    >
+      <font-awesome-icon icon="chevron-left" class="text-support text-2xl" />
+    </div>
+    <div
+      @click="swiper.next()"
+      class="absolute cursor-pointer right-2 top-1/2 transform -translate-y-1/2 sm:right-4 z-20"
+    >
+      <font-awesome-icon icon="chevron-right" class="text-support text-2xl" />
+    </div>
   </SectionContainer>
 </template>
 
 <script lang="ts" setup>
-import SectionContainer from "../ui/SectionContainer.vue";
+import SectionContainer from "~/components/ui/SectionContainer.vue";
+
+const containerRef = ref(null);
+const swiper = useSwiper(containerRef, {
+  loop: true,
+});
 
 type Testimonial = {
   id: string;

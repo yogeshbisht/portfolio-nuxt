@@ -22,6 +22,7 @@
 import ProjectHero from "~/components/project/ProjectHero.vue";
 import Header from "~/components/ui/Header.vue";
 import projects from "~/constants/projects";
+import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
 const router = useRouter();

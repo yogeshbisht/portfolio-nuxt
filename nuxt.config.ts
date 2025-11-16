@@ -1,3 +1,4 @@
+import { defineNuxtConfig } from "nuxt/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
@@ -5,14 +6,19 @@ export default defineNuxtConfig({
 
   css: [
     "~/assets/css/main.css",
-    "@fortawesome/fontawesome-svg-core/styles.css"
+    "@fortawesome/fontawesome-svg-core/styles.css",
   ],
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
 
-  modules: ["@nuxt/image", "nuxt-swiper", "@pinia/nuxt", "@nuxt/ui"],
+  modules: [
+    "@nuxt/image",
+    "@pinia/nuxt",
+    "@nuxt/ui",
+    "nuxt-swiper",
+  ],
 
-  compatibilityDate: "2024-11-01"
+  compatibilityDate: "2024-11-01",
 });

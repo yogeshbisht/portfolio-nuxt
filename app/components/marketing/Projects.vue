@@ -14,6 +14,7 @@
 import SectionContainer from "~/components/ui/SectionContainer.vue";
 import ProjectCard from "~/components/project/ProjectCard.vue";
 import projects from "~/constants/projects";
+import { computed } from "vue";
 
 const props = defineProps({
   type: {
